@@ -1,11 +1,11 @@
 import Nav from "./Nav";
-import VistaGrupal from "./VistaGrupal";
+import GroupView from "./GroupView";
 const Home = () => {
 	return (
 		<div>
 			<Nav />
-			<VistaGrupal titulo="Peliculas populares" url="popular" />
-			<VistaGrupal titulo="Peliculas mejor puntuadas" url="top_rated" />
+			<GroupView titulo="Peliculas tendencias" url="trending/movie/week" />
+			<GroupView titulo="Series tendencias" url="trending/tv/week" />
 		</div>
 	);
 };

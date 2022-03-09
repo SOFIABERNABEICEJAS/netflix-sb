@@ -1,5 +1,5 @@
 import "../styles/_nav.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 
 const Nav = () => {
@@ -19,9 +19,16 @@ const Nav = () => {
 		<div className="nav">
 			<div className="nav-link">
 				<ul>
-					<li>INICIO</li>
-					<li>PELICULAS</li>
-					<li>SERIES</li>
+					<Link to="/">
+						<li>INICIO</li>
+					</Link>
+
+					<Link to="/movies">
+						<li>PELICULAS</li>
+					</Link>
+					<Link to="/tv">
+						<li>SERIES</li>
+					</Link>
 				</ul>
 			</div>
 			<div className="nav-input">
