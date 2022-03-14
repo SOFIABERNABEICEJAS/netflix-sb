@@ -1,16 +1,9 @@
-@import "./_Variables.scss";
-@import "./_Mixin.scss";
+.gruop-view {
+	padding-left: 40px;
+	padding-right: 40px;
+	background-color: black;
+}
 
-.group-view-conteiner {
-	@include flex-colum-;
-	width: 100%;
-	border: 1px solid black;
-	margin: $margin-segundario;
-	background-color: red;
-	h2 {
-		padding: 5px;
-	}
-	.group-view {
-		display: flex;
-	}
+.slick-slide img {
+	margin: auto;
 }

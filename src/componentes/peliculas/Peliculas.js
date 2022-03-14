@@ -1,6 +1,6 @@
 const Peliculas = () => {
 	return;
-	<div>Peliculas</div>;
+	<h1>Movie Treding</h1>;
 };
 
 export default Peliculas;

@@ -1,9 +1,10 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Peliculas from "./componentes/peliculas/Peliculas";
+import MovieTreding from "./componentes/peliculas/MovieTreding";
 import MoviesInfo from "./componentes/MoviesInfo";
+import Peliculas from "./componentes/peliculas/Peliculas";
 import RepartoPeliculas from "./componentes/peliculas/RepartoPeliculas";
-import VideosPeliculas from "./componentes/peliculas/VideosPeliculas";
+
 import SimilaresPeliculas from "./componentes/peliculas/SimilaresPeliculas";
 
 import Tv from "./componentes/series/Tv";
@@ -23,8 +24,8 @@ const App = () => {
 				<Route path="/" element={<Home />} />
 				<Route path="movies/:id/info" element={<MoviesInfo />} />
 				<Route path="/movies" element={<Peliculas />} />
+				<Route path="/movies/Treding" element={<MovieTreding />} />
 				<Route path="/movies/:id/reparto" element={<RepartoPeliculas />} />
-				<Route path="/movies/:id/videos" element={<VideosPeliculas />} />
 				<Route path="/movies/:id/similares" element={<SimilaresPeliculas />} />
 				<Route path="/tv" element={<Tv />} />
 				<Route path="/tv/:id/info" element={<InfoTv />} />
