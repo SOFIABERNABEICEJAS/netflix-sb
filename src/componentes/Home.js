@@ -5,6 +5,7 @@ const Home = () => {
 	return (
 		<div>
 			<Nav />
+
 			<GroupView titulo="Peliculas tendencias" url="movie" />
 			<GroupView titulo="Series tendencias" url="tv" />
 		</div>

@@ -19,7 +19,7 @@ const GroupView = ({ titulo, url }) => {
 	return (
 		<div className="gruop-view">
 			<Link to={`${url}/treding`}>
-				<h2>{titulo}</h2>
+				<h2>{titulo} </h2>
 			</Link>
 			<Slider arrows={true} slidesToShow={5}>
 				{groupview.map((curr) => (
