@@ -5,9 +5,8 @@ const Home = () => {
 	return (
 		<div>
 			<Nav />
-			<Carrusel />
-			<GroupView titulo="Peliculas tendencias" url="movie" />
-			<GroupView titulo="Series tendencias" url="tv" />
+			<Carrusel titulo="Peliculas tendencias" url="movie" />
+			<Carrusel titulo="Series tendencias" url="tv" />
 		</div>
 	);
 };

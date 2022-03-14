@@ -1,9 +1,13 @@
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../styles/_Carousel.scss";
 import "../styles/_GroupView.scss";
 import IndividualView from "./IndividualView";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const GroupView = ({ titulo, url }) => {
+const Carrusel = ({ titulo, url }) => {
 	const [groupview, setGroupview] = useState([]);
 
 	useEffect(() => {
@@ -13,14 +17,10 @@ const GroupView = ({ titulo, url }) => {
 			.then((res) => res.json())
 			.then((data) => setGroupview(data.results));
 	}, []);
-
 	return (
-		<div className="group-view-conteiner">
-			<div>
-				<h2>{titulo}</h2>
-			</div>
-
-			<div className="group-view">
+		<div className="container">
+			<h2>{titulo}</h2>
+			<Slider arrows={true} slidesToShow={5}>
 				{groupview.map((curr) => (
 					<Link to={`${url}/${curr.id}/info`} key={curr.id}>
 						<IndividualView
@@ -29,8 +29,9 @@ const GroupView = ({ titulo, url }) => {
 						/>
 					</Link>
 				))}
-			</div>
+			</Slider>
 		</div>
 	);
 };
-export default GroupView;
+
+export default Carrusel;

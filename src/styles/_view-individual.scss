@@ -3,12 +3,11 @@
 
 .individual-view {
 	@include flex-colum;
-	width: 260px;
+	width: 220px;
 	margin: 4px;
 	overflow: hidden;
-	background-color: aqua;
 
 	img {
-		height: 400px;
+		height: 350px;
 	}
 }
