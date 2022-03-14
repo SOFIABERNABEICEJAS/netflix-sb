@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const InfoMovie = () => {
+const MoviesInfo = () => {
 	const [infomovie, setInfomovie] = useState([]);
 	const params = useParams();
 	useEffect(() => {
 		fetch(
-			`https://api.themoviedb.org/3/película/${params.id}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`
+			`https://api.themoviedb.org/3/${params.id}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`
 		)
 			.then((res) => res.json())
 			.then((data) => setInfomovie(data.results));
@@ -20,4 +20,4 @@ const InfoMovie = () => {
 	);
 };
 
-export default InfoMovie;
+export default MoviesInfo;

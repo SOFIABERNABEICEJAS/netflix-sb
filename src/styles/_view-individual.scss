@@ -1,4 +1,14 @@
-.IndividualView {
-	margin: 5px;
-	background-color: red;
+@import "./_Variables.scss";
+@import "./_Mixin.scss";
+
+.individual-view {
+	@include flex-colum;
+	width: 260px;
+	margin: 4px;
+	overflow: hidden;
+	background-color: aqua;
+
+	img {
+		height: 400px;
+	}
 }

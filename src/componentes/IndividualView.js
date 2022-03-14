@@ -1,10 +1,10 @@
-import "../styles/_view-individual.scss";
+import "../styles/_View-individual.scss";
 
-const IndividualView = ({ title, image, id }) => {
+const IndividualView = ({ title, image }) => {
 	return (
 		<div className="individual-view">
-			<img src={image} alt="{id}" />
-			<h1>{title} </h1>
+			<img src={image} alt={title} />
+			<h3>{title} </h3>
 		</div>
 	);
 };

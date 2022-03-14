@@ -1,7 +1,7 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Peliculas from "./componentes/peliculas/Peliculas";
-import InfoMovie from "./componentes/InfoMovie";
+import MoviesInfo from "./componentes/MoviesInfo";
 import RepartoPeliculas from "./componentes/peliculas/RepartoPeliculas";
 import VideosPeliculas from "./componentes/peliculas/VideosPeliculas";
 import SimilaresPeliculas from "./componentes/peliculas/SimilaresPeliculas";
@@ -21,8 +21,8 @@ const App = () => {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="movies/:id/info" element={<MoviesInfo />} />
 				<Route path="/movies" element={<Peliculas />} />
-				<Route path="/movies/:id/info" element={<InfoMovie />} />
 				<Route path="/movies/:id/reparto" element={<RepartoPeliculas />} />
 				<Route path="/movies/:id/videos" element={<VideosPeliculas />} />
 				<Route path="/movies/:id/similares" element={<SimilaresPeliculas />} />

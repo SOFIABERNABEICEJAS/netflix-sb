@@ -1,4 +1,4 @@
-import "../styles/_nav.scss";
+import "../styles/_Nav.scss";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 
