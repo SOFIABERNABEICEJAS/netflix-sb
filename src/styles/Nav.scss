@@ -1,11 +1,10 @@
-@import "./_Variables.scss";
-@import "./_Mixin.scss";
+@import "./Variables.scss";
+@import "./Mixin.scss";
 
 .nav {
 	height: 80px;
 	width: 100%;
-	margin: 0;
-	background-color: #111111bd;
+	background-color: darkgray;
 	color: $color-secuntario;
 	@include flex-alinear;
 }

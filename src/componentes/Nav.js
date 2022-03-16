@@ -1,6 +1,7 @@
-import "../styles/_Nav.scss";
+import "../styles/Nav.scss";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
+//import Context from "../context/Context";
 
 const Nav = () => {
 	const navigate = useNavigate();
@@ -14,6 +15,9 @@ const Nav = () => {
 	const handleChange = (e) => {
 		setValorDelInput(e.target.value);
 	};
+	//const handleChangeIdioma = (e) => {
+	//	context.setLanguage(e.target.value);
+	//};
 
 	return (
 		<div className="nav">
@@ -34,6 +38,10 @@ const Nav = () => {
 			<div className="nav-input">
 				<form onSubmit={handleSubmit}>
 					<input type="text" onChange={handleChange}></input>
+					{/* <select onChange={handleChangeIdioma}>
+					<option value="es">Español</option>
+						<option value="en">Ingles</option>
+					</select> */}
 				</form>
 			</div>
 

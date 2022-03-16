@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../styles/_GroupView.scss";
+import "../styles/GroupView.scss";
 import IndividualView from "./IndividualView";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -15,6 +15,7 @@ const GroupView = ({ titulo, url }) => {
 		)
 			.then((res) => res.json())
 			.then((data) => setGroupview(data.results));
+		console.log(groupview);
 	}, []);
 	return (
 		<div className="gruop-view">
