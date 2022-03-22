@@ -7,7 +7,7 @@ import "../styles/Carrusel.scss";
 const CarruselHome = ({ result, movieTv }) => {
 	return (
 		<div className="container">
-			<Slider dots={true} arrows={true} slidesToShow={4} autoplay={true}>
+			<Slider dots={true} arrows={true} slidesToShow={1} autoplay={true}>
 				{result.map((curr) => (
 					<Link key={curr.id} to={`${movieTv}/${curr.id}/info`}>
 						<article className="conteiner-carrusel">

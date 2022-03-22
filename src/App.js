@@ -1,6 +1,5 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import Nav from "./componentes/Nav";
 import MovieTreding from "./componentes/peliculas/MovieTreding";
 import MoviesInfo from "./componentes/MoviesInfo";
@@ -9,7 +8,7 @@ import RepartoPeliculas from "./componentes/peliculas/RepartoPeliculas";
 
 import SimilaresPeliculas from "./componentes/peliculas/SimilaresPeliculas";
 
-import Tv from "./componentes/series/Tv";
+import Tv from "./componentes/Tv";
 import InfoTv from "./componentes/series/InfoTv";
 import EpisodioTv from "./componentes/series/EpisodioTv";
 import RepartoTv from "./componentes/series/RepartoTv";

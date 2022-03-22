@@ -3,14 +3,13 @@ import CarruselHome from "./CarruselHome";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 
 const Home = () => {
-	const { resultMovie, isLoadingMovie } = useFetchGeneral(
+	const { result, isLoading } = useFetchGeneral("trending", "movie", "/week");
+	const { result: resultTv, isLoading: isLoadingTv } = useFetchGeneral(
 		"trending",
-		"movie",
+		"tv",
 		"/week"
 	);
-	const { resultMovie: resultTv, isLoadingMovie: isLoadingTv } =
-		useFetchGeneral("trending", "tv", "/week");
-	const { resultMovie: resultCarrusel, isLoadingCarrusel: isLoadingCarrusel } =
+	const { result: resultCarrusel, isLoading: isLoadingCarrusel } =
 		useFetchGeneral("movie", "now_playing", "");
 
 	return (
@@ -22,8 +21,8 @@ const Home = () => {
 			/>
 			<GroupView
 				titulo="Peliculas tendencias"
-				isLoading={isLoadingMovie}
-				result={resultMovie}
+				isLoading={isLoading}
+				result={result}
 				movieTv="movie"
 			/>
 			<GroupView
