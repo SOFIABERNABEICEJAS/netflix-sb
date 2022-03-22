@@ -1,4 +1,12 @@
-.conteiner-carrusel {
+.conteiner {
+	padding: 90px;
+	background: #419be0;
 	height: 300px;
-	background-color: pink;
+	width: 800px;
+}
+.conteiner-carrusel {
+	height: 250px;
+	img {
+		margin: auto;
+	}
 }
