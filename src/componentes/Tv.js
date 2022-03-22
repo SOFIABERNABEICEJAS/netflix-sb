@@ -11,12 +11,24 @@ const Tv = () => {
 
 	return (
 		<section>
-			<GroupView titulo="Series populares" result={resultTvPopular} />
+			<GroupView
+				titulo="Series populares"
+				result={resultTvPopular}
+				categoria="popular"
+				tipo="tv"
+			/>
 			<GroupView
 				titulo="Series con mejores críticas"
 				result={resultTvTopRated}
+				categoria="top_rated"
+				tipo="tv"
 			/>
-			<GroupView titulo="Series al aire" result={resultOnTheAir} />
+			<GroupView
+				titulo="Series al aire"
+				result={resultOnTheAir}
+				categoria="on_the_air"
+				tipo="tv"
+			/>
 		</section>
 	);
 };

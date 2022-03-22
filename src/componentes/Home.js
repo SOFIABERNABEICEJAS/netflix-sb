@@ -17,19 +17,22 @@ const Home = () => {
 			<CarruselHome
 				isLoading={isLoadingCarrusel}
 				result={resultCarrusel}
-				movieTv="movie"
+				tipo="movie"
+				categoria="now_playing"
 			/>
 			<GroupView
 				titulo="Peliculas tendencias"
 				isLoading={isLoading}
 				result={result}
-				movieTv="movie"
+				tipo="movie"
+				categoria="trending"
 			/>
 			<GroupView
 				titulo="Series tendencias"
 				isLoading={isLoadingTv}
 				result={resultTv}
-				movieTv="tv"
+				tipo="tv"
+				categoria="trending"
 			/>
 		</div>
 	);

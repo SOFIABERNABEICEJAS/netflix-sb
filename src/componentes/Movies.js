@@ -4,7 +4,7 @@ import useFetchGeneral from "../hooks/UseFetchGeneral";
 const Movies = () => {
 	const { result: resultPopular, isLoading: isLoadingPopular } =
 		useFetchGeneral("movie", "popular", "");
-	const { resul: resultTopRated, isLoading: isLoadingTopRated } =
+	const { result: resultTopRated, isLoading: isLoadingTopRated } =
 		useFetchGeneral("movie", "top_rated", "");
 	const { result: resultUpcoming, isLoading: isLoadingUpcoming } =
 		useFetchGeneral("movie", "upcoming", "");
@@ -12,15 +12,32 @@ const Movies = () => {
 		useFetchGeneral("movie", "now_playing", "");
 
 	return (
-		<section>
-			<GroupView titulo="Peliculas populares" result={resultPopular} />
+		<div>
 			<GroupView
-				titulo="Peliculas con mejores críticas"
-				result={resultTopRated}
+				titulo="Peliculas populares"
+				result={resultPopular}
+				categoria="popular"
+				tipo="movie"
 			/>
-			<GroupView titulo="Peliculas a estrenarse" result={resultUpcoming} />
-			<GroupView titulo="Peliculas en el cine" result={resultNowPlaying} />
-		</section>
+			<GroupView
+				titulo="Peliculas con mejores criticas"
+				result={resultTopRated}
+				tipo="movie"
+				categoria="top_rated"
+			/>
+			<GroupView
+				titulo="Peliculas a estrenarse"
+				result={resultUpcoming}
+				tipo="movie"
+				categoria="upcoming"
+			/>
+			<GroupView
+				titulo="Peliculas en el cine"
+				result={resultNowPlaying}
+				tipo="movie"
+				categoria="now_playing"
+			/>
+		</div>
 	);
 };
 
