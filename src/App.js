@@ -1,7 +1,7 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./componentes/Nav";
-import MovieTreding from "./componentes/peliculas/MovieTreding";
+import MovieTrending from "./componentes/MovieTrending";
 import MoviesInfo from "./componentes/MoviesInfo";
 import Movies from "./componentes/Movies";
 import RepartoPeliculas from "./componentes/peliculas/RepartoPeliculas";
@@ -25,12 +25,12 @@ const App = () => {
 
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="movies/:id/info" element={<MoviesInfo />} />
-				<Route path="/movies" element={<Movies />} />
-				<Route path="/movies/Treding" element={<MovieTreding />} />
+				<Route path="movie/:id/info" element={<MoviesInfo />} />
+				<Route path="/movie" element={<Movies />} />
+				<Route path="/movie/trending" element={<MovieTrending />} />
 
-				<Route path="/movies/:id/reparto" element={<RepartoPeliculas />} />
-				<Route path="/movies/:id/similares" element={<SimilaresPeliculas />} />
+				<Route path="/movie/:id/reparto" element={<RepartoPeliculas />} />
+				<Route path="/movie/:id/similares" element={<SimilaresPeliculas />} />
 				<Route path="/tv" element={<Tv />} />
 				<Route path="/tv/:id/info" element={<InfoTv />} />
 				<Route path="/tv/:id/episodios" element={<EpisodioTv />} />

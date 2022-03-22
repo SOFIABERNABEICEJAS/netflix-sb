@@ -2,11 +2,12 @@
 @import "./Mixin.scss";
 
 .individual-view {
-	@include flex-colum;
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
 	width: 220px;
-	margin: 4px;
+	margin: 10px;
 	overflow: hidden;
-
 	img {
 		height: 350px;
 	}

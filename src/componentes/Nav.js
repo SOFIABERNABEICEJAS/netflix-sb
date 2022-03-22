@@ -27,7 +27,7 @@ const Nav = () => {
 						<li>INICIO</li>
 					</Link>
 
-					<Link to="/movies">
+					<Link to="/movie">
 						<li>PELICULAS</li>
 					</Link>
 					<Link to="/tv">

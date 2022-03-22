@@ -1,16 +1,9 @@
-@import "./Variables.scss";
-@import "./Mixin.scss";
-
-.group-view-conteiner {
-	@include flex-colum-;
+.slick-slide {
 	width: 100%;
-	border: 1px solid black;
-	margin: $margin-segundario;
-	background-color: red;
-	h2 {
-		padding: 5px;
-	}
-	.group-view {
-		display: flex;
-	}
+	overflow: hidden;
+}
+.slick-slide img {
+	width: 100%;
+	margin: auto;
+	height: 300px;
 }

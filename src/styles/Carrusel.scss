@@ -1,12 +1,8 @@
-.conteiner {
-	padding: 90px;
-	background: #419be0;
-	height: 300px;
-	width: 800px;
+.container {
+	padding-bottom: 25px;
+	background-color: gray;
 }
-.conteiner-carrusel {
-	height: 250px;
-	img {
-		margin: auto;
-	}
+
+.slick-slide img {
+	margin: auto;
 }
