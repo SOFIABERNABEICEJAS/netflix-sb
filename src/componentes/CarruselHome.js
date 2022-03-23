@@ -12,7 +12,7 @@ const CarruselHome = ({ result, movieTv }) => {
 					<Link key={curr.id} to={`${movieTv}/${curr.id}/info`}>
 						<article className="conteiner-carrusel">
 							<img
-								src={`https://image.tmdb.org/t/p/original/${curr.poster_path}`}
+								src={`https://image.tmdb.org/t/p/original/${curr.backdrop_path}`}
 							/>
 						</article>
 					</Link>

@@ -1,0 +1,21 @@
+@import "./Variables.scss";
+@import "./Mixin.scss";
+
+.conteiner-seccion {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.conteiner-title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.conteiner-cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+}

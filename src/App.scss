@@ -1,6 +1,8 @@
 @import "./styles/Variables.scss";
 @import "./styles/Mixin.scss";
-
+* {
+	color: $color-secuntario;
+}
 body {
 	margin: 0;
 	background-color: black;

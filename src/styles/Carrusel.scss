@@ -1,8 +1,9 @@
 .container {
 	padding-bottom: 25px;
-	background-color: gray;
-}
-
-.slick-slide img {
-	margin: auto;
+	background-color: rgb(54, 48, 48);
+	.slick-slide img {
+		margin: auto;
+		height: 350px;
+		width: 100%;
+	}
 }

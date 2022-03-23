@@ -2,9 +2,8 @@
 @import "./Mixin.scss";
 
 .nav {
-	height: 80px;
 	width: 100%;
-	background-color: darkgray;
+	background-color: transparent;
 	color: $color-secuntario;
 	@include flex-alinear;
 }
