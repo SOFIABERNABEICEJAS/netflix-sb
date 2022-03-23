@@ -1,9 +1,11 @@
 .container {
 	padding-bottom: 25px;
-	background-color: rgb(54, 48, 48);
-	.slick-slide img {
-		margin: auto;
-		height: 350px;
-		width: 100%;
+	.slick-slide {
+		overflow: hidden;
+		img {
+			margin: auto;
+			height: 360px;
+			width: 100%;
+		}
 	}
 }

@@ -11,7 +11,6 @@ const GroupView = ({ titulo, result, tipo, categoria, isLoading }) => {
 			<Link to={`/${tipo}/${categoria}`}>
 				<h2>{titulo} </h2>
 			</Link>
-			{`${isLoading} && <p>ESTA CARGANDO</p>`}
 			<Slider arrows={true} slidesToShow={5}>
 				{result.map((curr) => (
 					<Link to={`${tipo}/${curr.id}/info`} key={curr.id}>
