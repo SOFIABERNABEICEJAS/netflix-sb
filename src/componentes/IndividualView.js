@@ -3,7 +3,9 @@ import "../styles/View-individual.scss";
 const IndividualView = ({ title, image }) => {
 	return (
 		<article className="individual-view">
-			<img src={image} alt={title} />
+			<div>
+				<img src={image} alt={title} />
+			</div>
 			<h3>{title}</h3>
 		</article>
 	);

@@ -7,9 +7,9 @@ const MovieTrending = () => {
 	const { result, isLoading } = useFetchGeneral("trending", "movie", "/week");
 	console.log(result);
 	return (
-		<div className="conteiner-seccion">
+		<div className="conteiner-section">
 			<div className="conteiner-title">
-				<h2>Peliculas tendencias</h2>
+				<h2>PELÍCULAS TENDENCIAS</h2>
 			</div>
 			<div className="conteiner-cards">
 				{result.map((curr) => (

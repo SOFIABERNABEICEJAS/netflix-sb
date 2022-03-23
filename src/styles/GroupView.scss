@@ -3,6 +3,13 @@
 
 .gruop-view {
 	padding: 30px;
+	h2 {
+		margin: $distancia-secundaria;
+	}
+	.gruop-view-title {
+		display: flex;
+		align-items: center;
+	}
 	.slick-slide img {
 		margin: auto;
 	}

@@ -15,12 +15,12 @@
 		li {
 			@include flex-central;
 			list-style: none;
-			margin: $margin-segundario;
+			margin: $distancia-secundaria;
 		}
 	}
 }
 
 .nav-input {
 	@include flex-alinear;
-	margin: $margin-principal;
+	margin: $distancia-principal;
 }

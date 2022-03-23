@@ -3,12 +3,9 @@
 
 .individual-view {
 	display: inline-block;
-	justify-content: center;
-	align-items: center;
 	width: 220px;
-	margin: 10px;
-	overflow: hidden;
+	margin: $distancia-secundaria;
 	img {
-		height: 350px;
+		width: 100%;
 	}
 }

@@ -14,27 +14,26 @@ const Movies = () => {
 
 	return (
 		<div>
-			<Contenedores />
 			<GroupView
-				titulo="Peliculas populares"
+				titulo="PELÍCULAS POPULARES"
 				result={resultPopular}
 				categoria="popular"
 				tipo="movie"
 			/>
 			<GroupView
-				titulo="Peliculas con mejores criticas"
+				titulo="PELÍCULAS CON MEJORES CRITICAS"
 				result={resultTopRated}
 				tipo="movie"
 				categoria="top_rated"
 			/>
 			<GroupView
-				titulo="Peliculas a estrenarse"
+				titulo="PELICULAS A ESTRENARSE"
 				result={resultUpcoming}
 				tipo="movie"
 				categoria="upcoming"
 			/>
 			<GroupView
-				titulo="Peliculas en el cine"
+				titulo="PELICULAS EN EL CINE"
 				result={resultNowPlaying}
 				tipo="movie"
 				categoria="now_playing"
