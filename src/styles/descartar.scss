@@ -1,9 +1,8 @@
-.slick-slide {
-	width: 100%;
+.carrusel {
+	height: 330px;
+	background-color: red;
 	overflow: hidden;
-}
-.slick-slide img {
-	width: 100%;
-	margin: auto;
-	height: 300px;
+	img {
+		width: 100%;
+	}
 }

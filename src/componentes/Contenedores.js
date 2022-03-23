@@ -1,28 +1,21 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import Slider from "react-slick";
+import Carousel from "react-material-ui-carousel";
+import Item from "./Item";
+import useFetchGeneral from "../hooks/UseFetchGeneral";
 import "../styles/descartar.scss";
+
 const Contenedores = () => {
+	const { result: resultCarruselcheto, isLoading: isLoadingCarruselcheto } =
+		useFetchGeneral("movie", "now_playing", "");
 	return (
-		<div className="container">
-			<Slider
-				dots={true}
-				arrows={true}
-				slidesToShow={1}
-				autoplay={true}
-				autoplaySpeed={1000}
-			>
-				<div>
-					<img src="http://placekitten.com/g/400/200" />
-				</div>
-				<div>
-					<img src="http://placekitten.com/g/400/200" />
-				</div>
-				<div>
-					<img src="http://placekitten.com/g/400/200" />
-				</div>
-			</Slider>
-		</div>
+		<Carousel animation="slide" className="carrusel">
+			{resultCarruselcheto.map((item, i) => (
+				<Item
+					key={i}
+					imagen={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`}
+				/>
+			))}
+		</Carousel>
 	);
 };
 

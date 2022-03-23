@@ -1,5 +1,6 @@
 import GroupView from "./GroupView";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
+import Contenedores from "./Contenedores";
 
 const Movies = () => {
 	const { result: resultPopular, isLoading: isLoadingPopular } =
@@ -13,6 +14,7 @@ const Movies = () => {
 
 	return (
 		<div>
+			<Contenedores />
 			<GroupView
 				titulo="Peliculas populares"
 				result={resultPopular}

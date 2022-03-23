@@ -21,14 +21,14 @@ const Home = () => {
 				categoria="now_playing"
 			/>
 			<GroupView
-				titulo="Peliculas tendencias"
+				titulo="PELICULAS TENDENCIAS"
 				isLoading={isLoading}
 				result={result}
 				tipo="movie"
 				categoria="trending"
 			/>
 			<GroupView
-				titulo="Series tendencias"
+				titulo="SERIES TENDENCIAS"
 				isLoading={isLoadingTv}
 				result={resultTv}
 				tipo="tv"
