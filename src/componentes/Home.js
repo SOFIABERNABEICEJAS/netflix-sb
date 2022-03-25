@@ -16,7 +16,7 @@ const Home = () => {
 	const isLoadingGeneral = isLoading || isLoadingTv || isLoadingCarrusel;
 
 	return (
-		<div className="relative">
+		<section className="relative">
 			<LoadingCircular isLoading={isLoading} />
 			{!isLoadingGeneral && (
 				<>
@@ -42,7 +42,7 @@ const Home = () => {
 					/>
 				</>
 			)}
-		</div>
+		</section>
 	);
 };
 

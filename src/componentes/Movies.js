@@ -1,6 +1,5 @@
 import GroupView from "./GroupView";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
-
 import LoadingCircular from "./LoadingCircular";
 
 const Movies = () => {
