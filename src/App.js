@@ -17,6 +17,7 @@ import SimilaresTv from "./componentes/series/SimilaresTv";
 import Busqueda from "./componentes/Busqueda";
 
 import Home from "./componentes/Home";
+import Error404 from "./componentes/Error404";
 
 const App = () => {
 	return (
@@ -38,6 +39,7 @@ const App = () => {
 				<Route path="/tv/:id/similares" element={<SimilaresTv />} />
 
 				<Route path="/busqueda/:nombre" element={<Busqueda />} />
+				<Route path="*" element={<Error404 />} />
 			</Routes>
 		</BrowserRouter>
 	);
