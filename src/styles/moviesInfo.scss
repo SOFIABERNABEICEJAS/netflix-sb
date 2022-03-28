@@ -25,26 +25,32 @@
 		display: flex;
 		flex-direction: column;
 		width: 700px;
+		margin: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		p {
+			margin: 4px;
+		}
 
 		.moviesInfo-conteiner-title {
 			display: flex;
-			padding: 10px;
+			padding-bottom: 15px;
 			h2 {
-				font-size: 35px;
+				font-size: 40px;
 			}
 			h3 {
-				margin-top: 15px;
+				margin-top: 20px;
 				margin-left: 15px;
 				color: rgb(189, 185, 180);
 			}
 		}
 		.moviesInfo-conteiner-info {
-			background-color: rgb(238, 238, 24);
-			margin: 10px;
-			padding: 10px;
-
+			padding-top: 10px;
 			p {
-				font-size: 20px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 18px;
 			}
 		}
 	}

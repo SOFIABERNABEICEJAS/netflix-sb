@@ -40,7 +40,7 @@ const MoviesInfo = () => {
 				<div className="moviesInfo-conteiner-img">
 					<img
 						src={`https://image.tmdb.org/t/p/w500/${infomovie.poster_path}`}
-						alt={infomovie.title}
+						alt={infomovie.original_title}
 					/>
 				</div>
 				<div className="moviesInfo-conteiner-texto">
@@ -48,17 +48,28 @@ const MoviesInfo = () => {
 						<h2>{infomovie.original_title}</h2>
 						<h3>{año}</h3>
 					</div>
-
+					<div>
+						<p>Duración: {infomovie.runtime} seg.</p>
+					</div>
 					<div className="moviesInfo-conteiner-info">
 						<p>{infomovie.overview} </p>
 					</div>
 					<div>
-						<p>Duración: {infomovie.runtime} </p>
-						<p>Presupuesto: {infomovie.budget}</p>
-						{DataObjectSharp.genres &&
-							datos.genres.map((curr) => {
-								<p>{curr.name} </p>;
-							})}
+						<p>Presupuesto: ${infomovie.budget ? infomovie.budget : 0}</p>
+
+						<p>
+							Recaudación: $
+							{infomovie.elongs_to_collection
+								? infomovie.elongs_to_collectio
+								: 0}
+						</p>
+						<p>Género:</p>
+						<ul>
+							{infomovie.genres &&
+								infomovie.genres.map((curr) => (
+									<li key={curr.id}>{curr.name} </li>
+								))}
+						</ul>
 					</div>
 				</div>
 			</div>
