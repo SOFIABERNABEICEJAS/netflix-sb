@@ -1,0 +1,51 @@
+.moviesInfo-fondo {
+	position: relative;
+	filter: brightness(50%);
+}
+.moviesInfo-conteiner {
+	position: absolute;
+	right: 150px;
+	top: 160px;
+	display: flex;
+	justify-content: center;
+
+	.moviesInfo-conteiner-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 280px;
+		height: 400px;
+		margin: 10px;
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+	.moviesInfo-conteiner-texto {
+		display: flex;
+		flex-direction: column;
+		width: 700px;
+
+		.moviesInfo-conteiner-title {
+			display: flex;
+			padding: 10px;
+			h2 {
+				font-size: 35px;
+			}
+			h3 {
+				margin-top: 15px;
+				margin-left: 15px;
+				color: rgb(189, 185, 180);
+			}
+		}
+		.moviesInfo-conteiner-info {
+			background-color: rgb(238, 238, 24);
+			margin: 10px;
+			padding: 10px;
+
+			p {
+				font-size: 20px;
+			}
+		}
+	}
+}
