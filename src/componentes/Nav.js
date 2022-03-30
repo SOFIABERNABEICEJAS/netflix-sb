@@ -5,11 +5,31 @@ import SearchIcon from "@mui/icons-material/Search";
 
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Input from "@mui/material/Input";
-import InputLabel from "@mui/material/InputLabel";
-import InputAdornment from "@mui/material/InputAdornment";
-import FormControl from "@mui/material/FormControl";
 import TextField from "@mui/material/TextField";
+import { styled } from "@mui/material/styles";
+
+const CssTextField = styled(TextField)({
+	"& label.Mui-focused": {
+		color: "white",
+	},
+	"& .MuiInput-underline:after": {
+		borderBottomColor: "white",
+	},
+	"& .MuiOutlinedInput-root": {
+		"& fieldset": {
+			borderColor: "white",
+		},
+		"&:hover fieldset": {
+			borderColor: "white",
+		},
+		"&.Mui-focused fieldset": {
+			borderColor: "white",
+		},
+		"&.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root": {
+			color: "white",
+		},
+	},
+});
 
 const Nav = () => {
 	const navigate = useNavigate();
@@ -46,11 +66,11 @@ const Nav = () => {
 			<div className="nav-input">
 				<form onSubmit={handleSubmit}>
 					<Box sx={{ display: "flex", alignItems: "flex-end" }}>
-						<SearchIcon sx={{ mr: 1, my: 0.5 }} />
-						<TextField
-							label="Busqueda"
+						<SearchIcon sx={{ mr: 1, my: 2 }} />
+						<CssTextField
+							label="Busqueda..."
 							onChange={handleChange}
-							variant="standard"
+							InputLabelProps={{ style: { color: "white" } }}
 						/>
 					</Box>
 				</form>
