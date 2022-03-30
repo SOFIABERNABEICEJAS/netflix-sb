@@ -1,28 +1,31 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { urlBase, apiKey, lenguaje, page } from "../auxiliares/auxiliares";
 
 //https://api.themoviedb.org/3/${categorias}/${tipo}${week}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`
 
 const UseFetchDetalles = (categorias, tipo, week) => {
-	const [resultDetalles, setResultDetalles] = useState([]);
+	const [infoDetalles, setInfoDetalles] = useState([]);
+	const paramsId = useParams();
+	const paramsTipo = useParams();
 	const [isLoading, setIsLoading] = useState(false);
 
-	const url = `${urlBase}${tipo}/${id}?${apiKey}${lenguaje}es-AR${page}1`;
+	const url = `${urlBase}${paramsTipo.tipo}/${paramsId.id}?${apiKey}${lenguaje}es${page}1`;
 
 	useEffect(() => {
 		setIsLoading(true);
 		fetch(url)
 			.then((res) => res.json())
-			.then((data) => {
-				setResultDetalles(data.results);
+			.then((data) => 
+			  setInfoDetalles(data)
 				setIsLoading(false);
 			});
 	}, []);
 
 	return {
-		resultDetalles: resultDetalles,
+		infoDetalles: infoDetalles,
 		isLoading: isLoading,
 	};
 };
 
-export default UseFetchDetalles;
+export default UseFetchDetalles

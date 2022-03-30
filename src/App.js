@@ -21,12 +21,12 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/:tipo/:id/info" element={<InfoDetalles />} />
-				<Route path="/:tipo" element={<Movies />} />
+				<Route path="/movie" element={<Movies />} />
 				<Route path="/:tipo/:categoria" element={<MovieTrending />} />
 
 				<Route path="/tv" element={<Tv />} />
 
-				<Route path="/tv/trending" element={<TvTrending />} />
+				<Route path="/:tipo/:categoria" element={<TvTrending />} />
 
 				<Route path="/busqueda/:nombre" element={<Busqueda />} />
 				<Route path="*" element={<Error404 />} />

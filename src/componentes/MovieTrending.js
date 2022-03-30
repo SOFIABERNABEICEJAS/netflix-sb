@@ -5,7 +5,7 @@ import "../styles/Section.scss";
 
 const MovieTrending = () => {
 	const { result, isLoading } = useFetchGeneral("trending", "movie", "/week");
-	console.log(result);
+
 	return (
 		<div className="conteiner-section">
 			<div className="conteiner-title">

@@ -4,12 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import "../styles/Carrusel.scss";
 
-const CarruselHome = ({ result, movieTv }) => {
+const CarruselHome = ({ result, tipo }) => {
 	return (
 		<div className="container">
 			<Slider arrows={false} dots={true} slidesToShow={1} autoplay={true}>
 				{result.map((curr) => (
-					<Link key={curr.id} to={`${movieTv}/${curr.id}/info`}>
+					<Link key={curr.id} to={`${tipo}/${curr.id}/info`}>
 						<article className="conteiner-carrusel">
 							<img
 								src={`https://image.tmdb.org/t/p/original/${curr.backdrop_path}`}
