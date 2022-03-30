@@ -18,7 +18,7 @@ const GroupView = ({ titulo, result, tipo, categoria, Loading }) => {
 
 			<Slider arrows={true} slidesToShow={5}>
 				{result.map((curr) => (
-					<Link to={`/${tipo}/${curr.id}/info`} key={curr.id}>
+					<Link to={`/${tipo}/${curr.id}/info`}>
 						<IndividualView
 							title={curr.title || curr.name}
 							image={`https://image.tmdb.org/t/p/w500/${curr.poster_path}`}

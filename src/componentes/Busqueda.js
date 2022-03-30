@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import IndividualView from "./IndividualView";
 import { urlBase, apiKey, lenguaje, page } from "../auxiliares/auxiliares";
 
-import "../styles/MovieTrending.scss";
+import "../styles/Section.scss";
 const Busqueda = () => {
 	const params = useParams();
 

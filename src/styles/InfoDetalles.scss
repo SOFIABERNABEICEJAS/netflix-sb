@@ -1,15 +1,15 @@
-.moviesInfo-fondo {
+.infoDetalles-fondo {
 	position: relative;
 	filter: brightness(50%);
 }
-.moviesInfo-conteiner {
+.infoDetalles-conteiner {
 	position: absolute;
 	right: 150px;
 	top: 160px;
 	display: flex;
 	justify-content: center;
 
-	.moviesInfo-conteiner-img {
+	.infoDetalles-conteiner-img {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -21,7 +21,7 @@
 			width: 100%;
 		}
 	}
-	.moviesInfo-conteiner-texto {
+	.infoDetalles-conteiner-texto {
 		display: flex;
 		flex-direction: column;
 		width: 700px;
@@ -33,7 +33,7 @@
 			margin: 4px;
 		}
 
-		.moviesInfo-conteiner-title {
+		.infoDetalles-conteiner-title {
 			display: flex;
 			padding-bottom: 15px;
 			h2 {
@@ -45,7 +45,7 @@
 				color: rgb(189, 185, 180);
 			}
 		}
-		.moviesInfo-conteiner-info {
+		.infoDetalles-conteiner-info {
 			padding-top: 10px;
 			p {
 				margin-top: 10px;

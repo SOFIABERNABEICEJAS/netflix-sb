@@ -3,19 +3,19 @@ import IndividualView from "./IndividualView";
 import { Link } from "react-router-dom";
 import "../styles/Section.scss";
 
-const MovieTrending = () => {
-	const { result, isLoading } = useFetchGeneral("trending", "movie", "/week");
-	console.log(result);
+const TvTrending = () => {
+	const { result, isLoading } = useFetchGeneral("trending", "tv", "/week");
+
 	return (
 		<div className="conteiner-section">
 			<div className="conteiner-title">
-				<h2>PELÍCULAS TENDENCIAS.....</h2>
+				<h2>SERIES TENDENCIAS</h2>
 			</div>
 			<div className="conteiner-cards">
 				{result.map((curr) => (
-					<Link to={`${curr.id}/info`}>
+					<Link to={`tv/${curr.id}/info`} key={curr.id}>
 						<IndividualView
-							title={curr.title}
+							title={curr.name}
 							image={`https://image.tmdb.org/t/p/w500/${curr.poster_path}`}
 						/>
 					</Link>
@@ -25,4 +25,4 @@ const MovieTrending = () => {
 	);
 };
 
-export default MovieTrending;
+export default TvTrending;
