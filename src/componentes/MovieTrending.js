@@ -9,11 +9,11 @@ const MovieTrending = () => {
 	return (
 		<div className="conteiner-section">
 			<div className="conteiner-title">
-				<h2>PELÍCULAS TENDENCIAS.....</h2>
+				<h2>titulo</h2>
 			</div>
 			<div className="conteiner-cards">
 				{result.map((curr) => (
-					<Link to={`${curr.id}/info`}>
+					<Link to={`/movie/${curr.id}/info`}>
 						<IndividualView
 							title={curr.title}
 							image={`https://image.tmdb.org/t/p/w500/${curr.poster_path}`}

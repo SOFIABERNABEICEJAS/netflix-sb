@@ -5,8 +5,11 @@
 	width: 100%;
 	background-color: transparent;
 	color: $color-secuntario;
-	background-color: black;
+
 	@include flex-alinear;
+	.nav-img {
+		width: 70px;
+	}
 }
 
 .nav-link {

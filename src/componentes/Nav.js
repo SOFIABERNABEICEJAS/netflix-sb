@@ -1,6 +1,7 @@
 import "../styles/Nav.scss";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
+
 import SearchIcon from "@mui/icons-material/Search";
 
 import * as React from "react";
@@ -17,7 +18,7 @@ const CssTextField = styled(TextField)({
 	},
 	"& .MuiOutlinedInput-root": {
 		"& fieldset": {
-			borderColor: "white",
+			borderColor: "darkgrey",
 		},
 		"&:hover fieldset": {
 			borderColor: "white",
