@@ -3,15 +3,17 @@ import CarruselHome from "./CarruselHome";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 import LoadingCircular from "./LoadingCircular";
 import "../styles/home.scss";
+
 const Home = () => {
-	const { result, isLoading } = useFetchGeneral("trending", "movie", "/week");
+	const { result, isLoading } = useFetchGeneral("trending", "movie", "week");
 	const { result: resultTv, isLoading: isLoadingTv } = useFetchGeneral(
 		"trending",
 		"tv",
-		"/week"
+		"week"
 	);
+
 	const { result: resultCarrusel, isLoading: isLoadingCarrusel } =
-		useFetchGeneral("movie", "now_playing", "");
+		useFetchGeneral("now_playing", "movie");
 
 	const isLoadingGeneral = isLoading || isLoadingTv || isLoadingCarrusel;
 

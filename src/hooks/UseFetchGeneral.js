@@ -2,19 +2,23 @@ import { useState, useEffect } from "react";
 import {
 	urlBase,
 	apiKey,
-	definirURL,
 	lenguaje,
-	page,
+	paginas,
+	definirURL,
 } from "../auxiliares/auxiliares";
 
 //https://api.themoviedb.org/3/${categorias}/${tipo}${week}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`
 
-const UseFetchGeneral = (categorias, tipo, week) => {
+const UseFetchGeneral = (categoria, tipo, page, week) => {
 	const [result, setResult] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
-	const [page, setPage] = useState([]);
+	const [totalPages, setTotalPages] = useState(1);
 
-	const url = `${urlBase}${categorias}/${tipo}${week}?${apiKey}${lenguaje}es-AR${page}1`;
+	const url = `${urlBase}${definirURL(
+		categoria,
+		tipo,
+		week
+	)}?${apiKey}${lenguaje}es-AR${paginas}${page}`;
 
 	useEffect(() => {
 		setIsLoading(true);
@@ -23,14 +27,14 @@ const UseFetchGeneral = (categorias, tipo, week) => {
 			.then((data) => {
 				setResult(data.results);
 				setIsLoading(false);
-				setPage(1);
+				setTotalPages(data.total_pages);
 			});
 	}, [page]);
 
 	return {
 		result: result,
 		isLoading: isLoading,
-		page: page,
+		totalPages: totalPages,
 	};
 };
 

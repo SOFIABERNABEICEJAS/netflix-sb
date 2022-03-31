@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import IndividualView from "./IndividualView";
-import { urlBase, apiKey, lenguaje, page } from "../auxiliares/auxiliares";
+import { urlBase, apiKey, lenguaje, paginas } from "../auxiliares/auxiliares";
 
 import "../styles/Section.scss";
 const Busqueda = () => {
@@ -11,7 +11,7 @@ const Busqueda = () => {
 	const [result, setResult] = useState([]);
 	useEffect(() => {
 		https: fetch(
-			`${urlBase}search/tv?${apiKey}&query=${params.nombre}${lenguaje}${page}`
+			`${urlBase}search/tv?${apiKey}&query=${params.nombre}${lenguaje}${paginas}`
 		)
 			.then((res) => res.json())
 			.then((data) => {

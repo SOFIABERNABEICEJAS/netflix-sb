@@ -2,11 +2,11 @@ import GroupView from "./GroupView";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 import LoadingCircular from "./LoadingCircular";
 const Tv = () => {
-	const { result, isLoading } = useFetchGeneral("tv", "popular", "");
+	const { result, isLoading } = useFetchGeneral("popular", "tv");
 	const { result: resultTvTopRated, isLoading: isLoadingTvTopRated } =
-		useFetchGeneral("tv", "top_rated", "");
+		useFetchGeneral("top_rated", "tv");
 	const { result: resultOnTheAir, isLoading: isLoadingOnTheAir } =
-		useFetchGeneral("tv", "on_the_air", "");
+		useFetchGeneral("on_the_air", "tv");
 
 	const isLoadingGeneral =
 		isLoading || isLoadingTvTopRated || isLoadingOnTheAir;
