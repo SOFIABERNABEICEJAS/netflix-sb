@@ -31,6 +31,10 @@ const UseFetchGeneral = (categoria, tipo, page, week) => {
 			});
 	}, [page]);
 
+	console.log(categoria);
+	console.log(tipo);
+	console.log(page);
+	console.log(week);
 	return {
 		result: result,
 		isLoading: isLoading,

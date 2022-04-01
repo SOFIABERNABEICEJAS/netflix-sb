@@ -1,0 +1,21 @@
+@import "./Variables.scss";
+@import "./Mixin.scss";
+
+.conteiner-title {
+	display: flex;
+	align-items: flex-start;
+	margin: $distancia-principal;
+	padding: $distancia-principal;
+	h3 {
+		margin-right: $distancia-secundaria;
+	}
+}
+
+.conteiner-sectionMovieTv {
+	@include flex-colum-central;
+	.conteiner-cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}

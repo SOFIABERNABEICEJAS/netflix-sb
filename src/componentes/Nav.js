@@ -67,7 +67,7 @@ const Nav = () => {
 			<div className="nav-input">
 				<form onSubmit={handleSubmit}>
 					<Box sx={{ display: "flex", alignItems: "flex-end" }}>
-						<SearchIcon sx={{ mr: 1, my: 2 }} />
+						<SearchIcon sx={{ mr: 1, my: 2 }} />{" "}
 						<CssTextField
 							label="Busqueda..."
 							onChange={handleChange}

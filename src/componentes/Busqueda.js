@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import IndividualView from "./IndividualView";
 import { urlBase, apiKey, lenguaje, paginas } from "../auxiliares/auxiliares";
 
-import "../styles/Section.scss";
+import "../styles/SectionMovieTv.scss";
 const Busqueda = () => {
 	const params = useParams();
 
@@ -19,19 +19,21 @@ const Busqueda = () => {
 			});
 	}, [params.nombre]);
 	return (
-		<div className="conteiner-section">
+		<div>
 			<div className="conteiner-title">
 				<h2>RESULTADO DE BUSQUEDA</h2>
 			</div>
-			<div className="conteiner-cards">
-				{result.map((curr) => (
-					<Link to={`/${curr.id}/info`} key={curr.id}>
-						<IndividualView
-							title={curr.title}
-							image={`https://image.tmdb.org/t/p/w500/${curr.poster_path}`}
-						/>
-					</Link>
-				))}
+			<div className="conteiner-sectionMovieTv">
+				<div className="conteiner-cards">
+					{result.map((curr) => (
+						<Link to={`/${curr.id}/info`} key={curr.id}>
+							<IndividualView
+								title={curr.title}
+								image={`https://image.tmdb.org/t/p/w500/${curr.poster_path}`}
+							/>
+						</Link>
+					))}
+				</div>
 			</div>
 		</div>
 	);

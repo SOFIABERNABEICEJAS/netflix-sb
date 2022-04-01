@@ -5,11 +5,11 @@ import LoadingCircular from "./LoadingCircular";
 const Movies = () => {
 	const { result, isLoading } = useFetchGeneral("popular", "movie");
 	const { result: resultTopRated, isLoading: isLoadingTopRated } =
-		useFetchGeneral("top_rated", "movie");
+		useFetchGeneral("top_rated", "movie", 1);
 	const { result: resultUpcoming, isLoading: isLoadingUpcoming } =
-		useFetchGeneral("upcoming", "movie");
+		useFetchGeneral("upcoming", "movie", 1);
 	const { result: resultNowPlaying, isLoading: isLoadingNowPlaying } =
-		useFetchGeneral("now_playing", "movie");
+		useFetchGeneral("now_playing", "movie", 1);
 
 	const isLoadingGeneral =
 		isLoading || isLoadingTopRated || isLoadingUpcoming || isLoadingNowPlaying;
@@ -27,7 +27,7 @@ const Movies = () => {
 						tipo="movie"
 					/>
 					<GroupView
-						titulo="PELÍCULAS CON MEJORES CRITICAS"
+						titulo="PELÍCULAS CON MEJOR CRITICA"
 						isLoading={isLoadingGeneral}
 						result={resultTopRated}
 						tipo="movie"
