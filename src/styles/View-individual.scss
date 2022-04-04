@@ -5,8 +5,14 @@
 	display: inline-block;
 	width: 220px;
 	margin: $distancia-secundaria;
-
-	img {
-		width: 100%;
+	h3 {
+		margin-top: $distancia-secundaria;
+	}
+	.conteiner-ind-img {
+		height: 330px;
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
 	}
 }

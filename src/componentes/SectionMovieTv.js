@@ -1,16 +1,19 @@
+import React from "react";
+
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import LoadingCircular from "./LoadingCircular";
-import Paginado from "./Paginado";
+
 import "../styles/SectionMovieTv.scss";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 import IndividualView from "./IndividualView";
 
-import * as React from "react";
 import Pagination from "@mui/material/Pagination";
 
-const SectionMovieTv = () => {
+// Si agrego aca el week se rompe peliculasy series pero se arregla home
+
+const SectionMovieTv = ({ week }) => {
 	const params = useParams();
 	const [page, setPage] = useState(1);
 	const { result, isLoading, totalPages } = useFetchGeneral(
@@ -31,8 +34,14 @@ const SectionMovieTv = () => {
 		if (params.tipo === "movie" && params.categoria === "upcoming") {
 			return "PELICULAS A ESTRENARSE";
 		}
+		if (params.tipo === "movie" && params.categoria === "trending") {
+			return "PELICULAS TENDENCIAS";
+		}
 		if (params.tipo === "movie" && params.categoria === "now_playing") {
-			return "PELICULAS EN EL CINE";
+			return "PROXIMAMENTO EN EL CINE";
+		}
+		if (params.tipo === "tv" && params.categoria === "trending") {
+			return "SERIES TENDENCIAS";
 		}
 		if (params.tipo === "tv" && params.categoria === "popular") {
 			return "SERIES POPULARES";
@@ -65,19 +74,15 @@ const SectionMovieTv = () => {
 							))}
 						</div>
 					</div>
-					{/* <div>
-						<button>Prev</button>
-						<button>Next</button>
-					</div> */}
-
-					<Pagination
-						count={totalPages}
-						page={page}
-						onChange={handleChange}
-						variant="outlined"
-						shape="rounded"
-						color="primary"
-					/>
+					<div className="conteiner-sectionMovieTv conteiner-paginado">
+						<Pagination
+							count={totalPages}
+							page={page}
+							onChange={handleChange}
+							variant="outlined"
+							shape="rounded"
+						/>
+					</div>
 				</>
 			)}
 		</div>

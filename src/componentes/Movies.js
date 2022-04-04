@@ -3,7 +3,7 @@ import useFetchGeneral from "../hooks/UseFetchGeneral";
 import LoadingCircular from "./LoadingCircular";
 
 const Movies = () => {
-	const { result, isLoading } = useFetchGeneral("popular", "movie");
+	const { result, isLoading } = useFetchGeneral("popular", "movie", 1);
 	const { result: resultTopRated, isLoading: isLoadingTopRated } =
 		useFetchGeneral("top_rated", "movie", 1);
 	const { result: resultUpcoming, isLoading: isLoadingUpcoming } =

@@ -13,9 +13,15 @@
 
 .conteiner-sectionMovieTv {
 	@include flex-colum-central;
+
 	.conteiner-cards {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+}
+
+.conteiner-paginado {
+	margin: $distancia-principal;
+	padding: $distancia-principal;
 }
