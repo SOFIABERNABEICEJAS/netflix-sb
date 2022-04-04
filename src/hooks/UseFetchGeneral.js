@@ -9,7 +9,7 @@ import {
 
 //https://api.themoviedb.org/3/${categorias}/${tipo}${week}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`
 
-const UseFetchGeneral = (categoria, tipo, page, week) => {
+const UseFetchGeneral = (categoria, tipo, page) => {
 	const [result, setResult] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const [totalPages, setTotalPages] = useState(1);
@@ -17,7 +17,7 @@ const UseFetchGeneral = (categoria, tipo, page, week) => {
 	const url = `${urlBase}${definirURL(
 		categoria,
 		tipo,
-		week
+		categoria === "trending" ? "week" : ""
 	)}?${apiKey}${lenguaje}es-AR${paginas}${page}`;
 
 	useEffect(() => {
@@ -31,10 +31,6 @@ const UseFetchGeneral = (categoria, tipo, page, week) => {
 			});
 	}, [page]);
 
-	console.log(categoria);
-	console.log(tipo);
-	console.log(page);
-	console.log(week);
 	return {
 		result: result,
 		isLoading: isLoading,

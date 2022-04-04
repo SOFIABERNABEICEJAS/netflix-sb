@@ -5,6 +5,7 @@ export const lenguaje = "&language=";
 
 // Definir URL entre categoria, tipoy week
 export const definirURL = (categoria, tipo, week) => {
+	console.log(week);
 	if (week) {
 		return `${categoria}/${tipo}/${week}`;
 	} else {
