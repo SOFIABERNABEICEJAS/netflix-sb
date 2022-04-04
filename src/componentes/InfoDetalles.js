@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/InfoDetalles.scss";
 import LoadingCircular from "./LoadingCircular";
+import StarRoundedIcon from "@mui/icons-material/StarRounded";
 
 const InfoDetalles = () => {
 	const [infoDetalles, setInfoDetalles] = useState([]);
 	const [isLoading, setIsloading] = useState(false);
-	const paramsId = useParams();
-	const paramsTipo = useParams();
+	const params = useParams();
 
 	useEffect(() => {
 		setIsloading(true);
 		fetch(
 			`
-			https://api.themoviedb.org/3/${paramsTipo.tipo}/${paramsId.id}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es&page=1`
+			https://api.themoviedb.org/3/${params.tipo}/${params.id}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es&page=1`
 		)
 			.then((res) => res.json())
 			.then((data) => {
@@ -66,21 +66,35 @@ const InfoDetalles = () => {
 								</h2>
 								<h3>{año}</h3>
 							</div>
+							<div className=" contenedor-star">
+								<p>{infoDetalles.vote_average}/10 </p>
+								<StarRoundedIcon sx={{ fontSize: 28 }} />
+							</div>
 							<div>
-								<p>Duración: {infoDetalles.runtime} seg.</p>
+								{/* <p>
+									{infoDetalles.runtime
+										? `	Duración: ${infoDetalles.runtime} seg.`
+										: {` Duración: ${infoDetalles.episode_run_time[0]` } ? `Duración: ${infoDetalles.episode_run_time[0]} seg.aproximadamente cada capitulo`: "sin datos" }
+								</p> */}
 							</div>
 							<div className="infoDetalles-conteiner-info">
 								<p>{infoDetalles.overview} </p>
 							</div>
+
 							<div>
 								<p>
-									Presupuesto: ${infoDetalles.budget ? infoDetalles.budget : 0}
+									{infoDetalles.budget
+										? `Presupuesto: $ ${
+												infoDetalles.budget ? infoDetalles.budget : 0
+										  } `
+										: `Temporadas: ${infoDetalles.number_of_seasons}`}
 								</p>
 								<p>
-									Recaudación: $
 									{infoDetalles.elongs_to_collection
-										? infoDetalles.elongs_to_collectio
-										: 0}
+										? ` Recaudación: $
+									${infoDetalles.elongs_to_collection ? infoDetalles.elongs_to_collectio : 0}
+									`
+										: `Cantidad de episodios: ${infoDetalles.number_of_episodes}`}
 								</p>
 								<p>Género:</p>
 								<ul>
