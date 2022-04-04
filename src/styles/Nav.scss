@@ -5,8 +5,10 @@
 	width: 100%;
 	background-color: transparent;
 	color: $color-secuntario;
-
+	font-size: large;
+	box-shadow: $shadow-principal;
 	@include flex-alinear;
+	justify-content: space-between;
 	.nav-img {
 		width: 70px;
 	}
@@ -22,6 +24,10 @@
 			margin: $distancia-secundaria;
 		}
 	}
+}
+
+.nav-link :hover {
+	color: $color-terciario;
 }
 
 .nav-input {
