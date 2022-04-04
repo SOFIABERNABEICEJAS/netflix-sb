@@ -13,7 +13,7 @@ import Pagination from "@mui/material/Pagination";
 
 // Si agrego aca el week se rompe peliculasy series pero se arregla home
 
-const SectionMovieTv = ({ week }) => {
+const SectionMovieTv = () => {
 	const params = useParams();
 	const [page, setPage] = useState(1);
 	const { result, isLoading, totalPages } = useFetchGeneral(
@@ -65,7 +65,7 @@ const SectionMovieTv = ({ week }) => {
 					<div className="conteiner-sectionMovieTv">
 						<div className="conteiner-cards">
 							{result.map((curr) => (
-								<Link to={`/movie/${curr.id}/info`}>
+								<Link to={`/${params.tipo}/${curr.id}/info`}>
 									<IndividualView
 										title={curr.title}
 										image={`https://image.tmdb.org/t/p/w500/${curr.poster_path}`}

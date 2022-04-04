@@ -12,7 +12,7 @@ const GroupView = ({ titulo, result, tipo, categoria }) => {
 		<div className="gruop-view">
 			<Link to={`/${tipo}/${categoria}`}>
 				<div className="gruop-view-title">
-					<h3>{titulo} </h3>
+					<h3>{titulo}</h3>
 					<ArrowForwardIosIcon aria-label="arrow" fontSize="small" />
 				</div>
 			</Link>
