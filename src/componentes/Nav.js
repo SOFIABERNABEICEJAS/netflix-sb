@@ -1,13 +1,11 @@
 import "../styles/Nav.scss";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
-
-import SearchIcon from "@mui/icons-material/Search";
-
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material/styles";
+import SearchIcon from "@mui/icons-material/Search";
 
 const CssTextField = styled(TextField)({
 	"& label.Mui-focused": {
@@ -44,9 +42,6 @@ const Nav = () => {
 	const handleChange = (e) => {
 		setValorDelInput(e.target.value);
 	};
-	//const handleChangeIdioma = (e) => {
-	//	context.setLanguage(e.target.value);
-	//};
 
 	return (
 		<div className="nav">
