@@ -36,7 +36,7 @@ const Nav = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		navigate(`/busqueda/${valorDelInput}`);
+		navigate(`/search/${valorDelInput}`);
 	};
 
 	const handleChange = (e) => {

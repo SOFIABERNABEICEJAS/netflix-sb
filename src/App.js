@@ -19,7 +19,7 @@ const App = () => {
 				<Route path="/movie" element={<Movies />} />
 				<Route path="/:tipo/:categoria" element={<SectionMovieTv />} />
 				<Route path="/tv" element={<Tv />} />
-				<Route path="/busqueda/:nombre" element={<Busqueda />} />
+				<Route path="/search/:nombre" element={<Busqueda />} />
 				<Route path="*" element={<Error404 />} />
 			</Routes>
 		</BrowserRouter>

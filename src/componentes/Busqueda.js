@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import IndividualView from "./IndividualView";
 import { urlBase, apiKey, lenguaje, paginas } from "../auxiliares/auxiliares";
-
+import imagenRota from "../assets/imagenRota.png";
 import "../styles/SectionMovieTv.scss";
 const Busqueda = () => {
 	const params = useParams();
@@ -11,7 +11,7 @@ const Busqueda = () => {
 	const [result, setResult] = useState([]);
 	useEffect(() => {
 		https: fetch(
-			`${urlBase}search/${params.tipo}?${apiKey}&query=${params.nombre}${lenguaje}${paginas}`
+			`${urlBase}search/movie?${apiKey}&query=${params.nombre}${lenguaje}${paginas}`
 		)
 			.then((res) => res.json())
 			.then((data) => {
@@ -26,10 +26,14 @@ const Busqueda = () => {
 			<div className="conteiner-sectionMovieTv">
 				<div className="conteiner-cards">
 					{result.map((curr) => (
-						<Link to={`/${curr.id}/info`} key={curr.id}>
+						<Link to={`/movie/${curr.id}/info`} key={curr.id}>
 							<IndividualView
 								title={curr.title}
-								image={`https://image.tmdb.org/t/p/w500/${curr.poster_path}`}
+								image={
+									curr.poster_path
+										? `https://image.tmdb.org/t/p/w500/${curr.poster_path}`
+										: imagenRota
+								}
 							/>
 						</Link>
 					))}
