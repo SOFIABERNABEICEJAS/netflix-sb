@@ -3,7 +3,7 @@
 
 .vista-grupal {
 	padding: 30px;
-	position: relative;
+	margin: auto;
 
 	.vista-grupal-titulo {
 		@include flex-alinear;
@@ -12,11 +12,12 @@
 			margin-right: $distancia-secundaria;
 		}
 	}
-
-	.slick-slider img {
+	
+	.slick-slide img {
 		margin: auto;
 		position: relative;
 	}
+
 }
 
 .slick-slider {
@@ -29,3 +30,4 @@
 	justify-content: center;
 	align-items: center;
 }
+
