@@ -22,7 +22,9 @@
 }
 
 .conteiner-paginado {
-	background-color: $color-terciario;
 	margin: $distancia-principal;
 	padding: $distancia-principal;
+}
+.MuiPaginationItem-root {
+	color: white !important;
 }
