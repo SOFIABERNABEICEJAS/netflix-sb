@@ -2,22 +2,15 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import IndividualView from "./IndividualView";
-import { urlBase, apiKey, lenguaje, paginas } from "../auxiliares/auxiliares";
+import { urlBase, apiKey, lenguaje, paginas } from "../auxiliares/variables";
 import imagenRota from "../assets/imagenRota.png";
 import "../styles/SectionMovieTv.scss";
-const Busqueda = () => {
-	const params = useParams();
+import useFetchSerch from "../hooks/useFetchSerch";
 
-	const [result, setResult] = useState([]);
-	useEffect(() => {
-		https: fetch(
-			`${urlBase}search/movie?${apiKey}&query=${params.nombre}${lenguaje}${paginas}`
-		)
-			.then((res) => res.json())
-			.then((data) => {
-				setResult(data.results);
-			});
-	}, [params.nombre]);
+
+const Busqueda = () => {
+	const { result, isLoading } = useFetchSerch(params.nombre, 1);
+
 	return (
 		<div>
 			<div className="conteiner-title">

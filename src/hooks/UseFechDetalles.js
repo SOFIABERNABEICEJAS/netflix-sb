@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { urlBase, apiKey, lenguaje, paginas } from "../auxiliares/auxiliares";
+import {
+	definirURLGeneral,
+	apiKey,
+	lenguaje,
+	paginas,
+} from "../auxiliares/variables";
 
-//https://api.themoviedb.org/3/${categorias}/${tipo}${week}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`
-
-const UseFetchDetalles = (tipo, categoria) => {
+const UseFetchDetalles = () => {
 	const [infoDetalles, setInfoDetalles] = useState([]);
 	const [isLoading, setIsloading] = useState(false);
 	const params = useParams();
