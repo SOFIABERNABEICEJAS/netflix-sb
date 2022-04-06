@@ -1,0 +1,13 @@
+@import "./Variables.scss";
+@import "./Mixin.scss";
+
+.contenedor-error404 {
+	@include flex-central;
+	margin: $distancia-principal;
+	.contenedor-error404-img {
+		@include flex-central;
+		img {
+			width: 100%;
+		}
+	}
+}
