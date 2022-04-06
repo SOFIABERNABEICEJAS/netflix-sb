@@ -76,11 +76,12 @@ const SectionMovieTv = () => {
 					</div>
 					<div className="conteiner-sectionMovieTv conteiner-paginado">
 						<Pagination
-							count={totalPages}
+							count={totalPages > 500 ? 500 : totalPages}
 							page={page}
 							onChange={handleChange}
 							variant="outlined"
 							shape="rounded"
+							color="primary"
 						/>
 					</div>
 				</>

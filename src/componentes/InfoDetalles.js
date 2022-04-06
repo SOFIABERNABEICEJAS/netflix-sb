@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/InfoDetalles.scss";
 import LoadingCircular from "./LoadingCircular";
-import StarRoundedIcon from "@mui/icons-material/StarRounded";
 
 const InfoDetalles = () => {
 	const [infoDetalles, setInfoDetalles] = useState([]);
@@ -67,35 +66,52 @@ const InfoDetalles = () => {
 								<h3>{año}</h3>
 							</div>
 							<div className=" contenedor-star">
-								<p>{infoDetalles.vote_average}/10 </p>
-								<StarRoundedIcon sx={{ fontSize: 28 }} />
+								<p>{infoDetalles.vote_average} / 10 ⭐ </p>
 							</div>
 							<div>
-								{/* <p>
-									{infoDetalles.runtime
-										? `	Duración: ${infoDetalles.runtime} seg.`
-										: {` Duración: ${infoDetalles.episode_run_time[0]` } ? `Duración: ${infoDetalles.episode_run_time[0]} seg.aproximadamente cada capitulo`: "sin datos" }
-								</p> */}
+								{params.tipo === "movie" && (
+									<p>
+										Duración:{" "}
+										{infoDetalles.runtime
+											? ` ${infoDetalles.runtime} seg.`
+											: ` 0 seg`}
+									</p>
+								)}
 							</div>
+
 							<div className="infoDetalles-conteiner-info">
 								<p>{infoDetalles.overview} </p>
 							</div>
 
 							<div>
-								<p>
-									{infoDetalles.budget
-										? `Presupuesto: $ ${
-												infoDetalles.budget ? infoDetalles.budget : 0
-										  } `
-										: `Temporadas: ${infoDetalles.number_of_seasons}`}
-								</p>
-								<p>
-									{infoDetalles.elongs_to_collection
-										? ` Recaudación: $
-									${infoDetalles.elongs_to_collection ? infoDetalles.elongs_to_collectio : 0}
-									`
-										: `Cantidad de episodios: ${infoDetalles.number_of_episodes}`}
-								</p>
+								{params.tipo === "movie" && (
+									<p>
+										Presupuesto: $
+										{infoDetalles.budget ? infoDetalles.budget : 0}
+									</p>
+								)}
+								{params.tipo === "movie" && (
+									<p>
+										Recaudación: $
+										{infoDetalles.elongs_to_collection
+											? infoDetalles.elongs_to_collectio
+											: 0}
+									</p>
+								)}
+								{params.tipo === "tv" && (
+									<p>
+										{infoDetalles.number_of_seasons
+											? `Temporadas: ${infoDetalles.number_of_seasons}`
+											: " Sin datos"}
+									</p>
+								)}
+								{params.tipo === "tv" && (
+									<p>
+										{infoDetalles.number_of_episodes
+											? `Cantidad de episodios: ${infoDetalles.number_of_episodes}`
+											: " Sin datos"}
+									</p>
+								)}
 								<p>Género:</p>
 								<ul>
 									{infoDetalles.genres &&
