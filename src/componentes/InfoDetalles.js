@@ -1,25 +1,16 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import UseFetchDetalles from "../hooks/UseFechDetalles";
 import "../styles/InfoDetalles.scss";
 import LoadingCircular from "./LoadingCircular";
+import imagenRota from "../assets/imagenRota.png";
 
 const InfoDetalles = () => {
-	const [infoDetalles, setInfoDetalles] = useState([]);
-	const [isLoading, setIsloading] = useState(false);
 	const params = useParams();
-
-	useEffect(() => {
-		setIsloading(true);
-		fetch(
-			`
-			https://api.themoviedb.org/3/${params.tipo}/${params.id}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es&page=1`
-		)
-			.then((res) => res.json())
-			.then((data) => {
-				setInfoDetalles(data);
-				setIsloading(false);
-			});
-	}, []);
+	const { infoDetalles, isLoading } = UseFetchDetalles(
+		params.tipo,
+		params.id,
+		1
+	);
 
 	const fecha = new Date(
 		infoDetalles.release_date
@@ -48,7 +39,11 @@ const InfoDetalles = () => {
 					<div className="infoDetalles-conteiner">
 						<div className="infoDetalles-conteiner-img">
 							<img
-								src={`https://image.tmdb.org/t/p/w500/${infoDetalles.poster_path}`}
+								src={
+									infoDetalles.poster_path
+										? `https://image.tmdb.org/t/p/w500/${infoDetalles.poster_path}`
+										: imagenRota
+								}
 								alt={
 									infoDetalles.original_title
 										? infoDetalles.original_title
@@ -66,7 +61,10 @@ const InfoDetalles = () => {
 								<h3>{año}</h3>
 							</div>
 							<div className=" contenedor-star">
-								<p>{infoDetalles.vote_average} / 10 ⭐ </p>
+								<p>
+									{infoDetalles.vote_average ? infoDetalles.vote_average : 0} /
+									10 ⭐{" "}
+								</p>
 							</div>
 							<div>
 								{params.tipo === "movie" && (

@@ -6,8 +6,7 @@
 	position: relative;
 
 	.gruop-view-title {
-		display: flex;
-		align-items: center;
+		@include flex-alinear;
 		margin: $distancia-secundaria;
 		h3 {
 			margin-right: $distancia-secundaria;

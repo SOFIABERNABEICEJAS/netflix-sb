@@ -1,3 +1,6 @@
+@import "./Variables.scss";
+@import "./Mixin.scss";
+
 .infoDetalles-fondo {
 	position: relative;
 	filter: brightness(50%);
@@ -6,8 +9,7 @@
 	position: absolute;
 	right: 150px;
 	top: 160px;
-	display: flex;
-	justify-content: center;
+	@include flex-central;
 
 	.infoDetalles-conteiner-img {
 		display: flex;
@@ -22,13 +24,12 @@
 		}
 	}
 	.infoDetalles-conteiner-texto {
-		display: flex;
-		flex-direction: column;
+		@include flex-colum;
 		width: 700px;
 		margin: 10px;
-		padding-bottom: 10px;
-		padding-left: 10px;
-		padding-right: 10px;
+		padding-bottom: $distancia-secundaria;
+		padding-left: $distancia-secundaria;
+		padding-right: $distancia-secundaria;
 		p {
 			margin: 4px;
 			font-size: 18px;
