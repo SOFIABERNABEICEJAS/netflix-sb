@@ -29,6 +29,18 @@ const InfoDetalles = () => {
 	);
 	const año = fecha.getFullYear();
 
+	//const movieTv = () => {
+	//if (params.tipo === "movie") {
+	//	return
+	//	("<p>Recaudación: $ {infoDetalles.elongs_to_collection? infoDetalles.elongs_to_collection: 0}</p>
+	//	<p>Presupuesto: $ {infoDetalles.budget ? infoDetalles.budget : 0}</p>")
+	//}
+	//if (params.tipo === "tv") {
+	//	return;
+	//	("<p>Temporadas: ${infoDetalles.number_of_seasons ? infoDetalles.number_of_seasons : Sin datos}</p>");
+	//	}
+	//};
+
 	return (
 		<div>
 			<LoadingCircular isLoading={isLoading} />
@@ -71,6 +83,13 @@ const InfoDetalles = () => {
 								<StarRoundedIcon sx={{ fontSize: 28 }} />
 							</div>
 							<div>
+								<p>
+									{" "}
+									Duración:
+									{infoDetalles.runtime
+										? `${infoDetalles.runtime} seg.`
+										: ` 0 seg`}
+								</p>
 								{/* <p>
 									{infoDetalles.runtime
 										? `	Duración: ${infoDetalles.runtime} seg.`
@@ -83,18 +102,30 @@ const InfoDetalles = () => {
 
 							<div>
 								<p>
-									{infoDetalles.budget
-										? `Presupuesto: $ ${
-												infoDetalles.budget ? infoDetalles.budget : 0
-										  } `
-										: `Temporadas: ${infoDetalles.number_of_seasons}`}
+									Presupuesto: $ {infoDetalles.budget ? infoDetalles.budget : 0}
 								</p>
 								<p>
+									{/* {infoDetalles.budget
+										? `Presupuesto: $ 	${
+												infoDetalles.budget ? infoDetalles.budget : 0
+										  }`
+										: `Temporadas: ${infoDetalles.number_of_seasons}`} */}
+								</p>
+
+								<p>
+									{" "}
+									Recaudación: ${" "}
 									{infoDetalles.elongs_to_collection
+										? infoDetalles.elongs_to_collection
+										: 0}
+									{/* {infoDetalles.belongs_to_collection
 										? ` Recaudación: $
-									${infoDetalles.elongs_to_collection ? infoDetalles.elongs_to_collectio : 0}
-									`
-										: `Cantidad de episodios: ${infoDetalles.number_of_episodes}`}
+									${infoDetalles.elongs_to_collection ? infoDetalles.elongs_to_collectio : 0}`
+										: `Cantidad de episodios: ${
+												infoDetalles.number_of_episodes
+													? infoDetalles.number_of_episodes
+													: 0
+										  }`} */}
 								</p>
 								<p>Género:</p>
 								<ul>

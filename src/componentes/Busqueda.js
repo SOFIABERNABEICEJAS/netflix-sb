@@ -11,7 +11,7 @@ const Busqueda = () => {
 	const [result, setResult] = useState([]);
 	useEffect(() => {
 		https: fetch(
-			`${urlBase}search/tv?${apiKey}&query=${params.nombre}${lenguaje}${paginas}`
+			`${urlBase}search/${params.tipo}?${apiKey}&query=${params.nombre}${lenguaje}${paginas}`
 		)
 			.then((res) => res.json())
 			.then((data) => {
