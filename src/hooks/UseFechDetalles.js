@@ -1,24 +1,26 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { urlBase, apiKey, lenguaje, page } from "../auxiliares/auxiliares";
+import {
+	definirURLGeneral,
+	apiKey,
+	lenguaje,
+	paginas,
+} from "../auxiliares/variables";
 
-//https://api.themoviedb.org/3/${categorias}/${tipo}${week}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`
-
-const UseFetchDetalles = (categorias, tipo, week) => {
+const UseFetchDetalles = () => {
 	const [infoDetalles, setInfoDetalles] = useState([]);
-	const paramsId = useParams();
-	const paramsTipo = useParams();
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsloading] = useState(false);
+	const params = useParams();
 
-	const url = `${urlBase}${paramsTipo.tipo}/${paramsId.id}?${apiKey}${lenguaje}es${page}1`;
+	const url = `${urlBase}${params.tipo}/${params.id}?${apiKey}${lenguaje}es-AR${paginas}1`;
 
 	useEffect(() => {
-		setIsLoading(true);
+		setIsloading(true);
 		fetch(url)
 			.then((res) => res.json())
-			.then((data) => 
-			  setInfoDetalles(data)
-				setIsLoading(false);
+			.then((data) => {
+				setInfoDetalles(data);
+				setIsloading(false);
 			});
 	}, []);
 
@@ -28,4 +30,4 @@ const UseFetchDetalles = (categorias, tipo, week) => {
 	};
 };
 
-export default UseFetchDetalles
+export default UseFetchDetalles;

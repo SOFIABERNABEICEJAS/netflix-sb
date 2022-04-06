@@ -1,10 +1,8 @@
 import React from "react";
-
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import LoadingCircular from "./LoadingCircular";
-
 import "../styles/SectionMovieTv.scss";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 import IndividualView from "./IndividualView";
