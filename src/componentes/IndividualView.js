@@ -1,6 +1,5 @@
 import "../styles/View-individual.scss";
 
-
 const IndividualView = ({ title, image }) => {
 	return (
 		<article className="individual-view">

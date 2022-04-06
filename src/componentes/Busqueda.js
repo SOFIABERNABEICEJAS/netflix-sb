@@ -3,11 +3,14 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import IndividualView from "./IndividualView";
 import { urlBase, apiKey, lenguaje, paginas } from "../auxiliares/variables";
+import imagenRota from "../assets/imagenRota.png";
 import "../styles/SectionMovieTv.scss";
 import useFetchSerch from "../hooks/useFetchSerch";
 
+
 const Busqueda = () => {
 	const { result, isLoading } = useFetchSerch(params.nombre, 1);
+
 	return (
 		<div>
 			<div className="conteiner-title">
@@ -16,10 +19,14 @@ const Busqueda = () => {
 			<div className="conteiner-sectionMovieTv">
 				<div className="conteiner-cards">
 					{result.map((curr) => (
-						<Link to={`/${curr.id}/info`} key={curr.id}>
+						<Link to={`/movie/${curr.id}/info`} key={curr.id}>
 							<IndividualView
 								title={curr.title}
-								image={`https://image.tmdb.org/t/p/w500/${curr.poster_path}`}
+								image={
+									curr.poster_path
+										? `https://image.tmdb.org/t/p/w500/${curr.poster_path}`
+										: imagenRota
+								}
 							/>
 						</Link>
 					))}

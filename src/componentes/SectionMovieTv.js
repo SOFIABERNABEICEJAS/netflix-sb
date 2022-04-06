@@ -3,13 +3,12 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import LoadingCircular from "./LoadingCircular";
+import imagenRota from "../assets/imagenRota.png";
 import "../styles/SectionMovieTv.scss";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 import IndividualView from "./IndividualView";
 
 import Pagination from "@mui/material/Pagination";
-
-// Si agrego aca el week se rompe peliculasy series pero se arregla home
 
 const SectionMovieTv = () => {
 	const params = useParams();
@@ -66,7 +65,11 @@ const SectionMovieTv = () => {
 								<Link to={`/${params.tipo}/${curr.id}/info`}>
 									<IndividualView
 										title={curr.title}
-										image={`https://image.tmdb.org/t/p/w500/${curr.poster_path}`}
+										image={
+											curr.poster_path
+												? `https://image.tmdb.org/t/p/w500/${curr.poster_path}`
+												: imagenRota
+										}
 									/>
 								</Link>
 							))}
