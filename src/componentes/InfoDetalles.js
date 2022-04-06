@@ -78,6 +78,7 @@ const InfoDetalles = () => {
 									</p>
 								)}
 							</div>
+
 							<div className="infoDetalles-conteiner-info">
 								<p>{infoDetalles.overview} </p>
 							</div>
