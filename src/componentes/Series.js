@@ -1,7 +1,7 @@
-import GroupView from "./GroupView";
+import VistaGrupal from "./VistaGrupal";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 import LoadingCircular from "./LoadingCircular";
-const Tv = () => {
+const Series = () => {
 	const { result, isLoading } = useFetchGeneral("popular", "tv");
 	const { result: resultTvTopRated, isLoading: isLoadingTvTopRated } =
 		useFetchGeneral("top_rated", "tv");
@@ -16,21 +16,21 @@ const Tv = () => {
 			<LoadingCircular isLoading={isLoading} />
 			{!isLoadingGeneral && (
 				<>
-					<GroupView
+					<VistaGrupal
 						titulo="SERIES POPULARES"
 						isLoading={isLoading}
 						result={result}
 						categoria="popular"
 						tipo="tv"
 					/>
-					<GroupView
+					<VistaGrupal
 						titulo="SERIES CON MEJORES CRÍTICAS"
 						isLoading={isLoadingGeneral}
 						result={resultTvTopRated}
 						categoria="top_rated"
 						tipo="tv"
 					/>
-					<GroupView
+					<VistaGrupal
 						titulo="SERIES EN TV"
 						isLoading={isLoadingGeneral}
 						result={resultOnTheAir}
@@ -43,4 +43,4 @@ const Tv = () => {
 	);
 };
 
-export default Tv;
+export default Series;

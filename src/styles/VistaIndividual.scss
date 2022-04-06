@@ -1,14 +1,14 @@
 @import "./Variables.scss";
 @import "./Mixin.scss";
 
-.individual-view {
+.vista-individual {
 	display: inline-block;
 	width: 220px;
 	margin: $distancia-secundaria;
 	h3 {
 		margin-top: $distancia-secundaria;
 	}
-	.conteiner-ind-img {
+	.cotenedor-ind-img {
 		height: 330px;
 		overflow: hidden;
 		img {

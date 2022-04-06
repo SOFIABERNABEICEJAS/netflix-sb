@@ -1,7 +1,7 @@
 @import "./Variables.scss";
 @import "./Mixin.scss";
 
-.conteiner-title {
+.contenedor-titulo {
 	display: flex;
 	align-items: flex-start;
 	margin: $distancia-principal;
@@ -11,18 +11,18 @@
 	}
 }
 
-.conteiner-sectionMovieTv {
+.contenedor-seccionpeliculaSerie {
 	@include flex-colum-central;
 
-	.conteiner-cards {
+	.contenedor-cartas {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 }
 
-.conteiner-paginado {
-	display: flex;
+.contenedor-paginado {
+	@include flex-colum-central;
 	margin: $distancia-principal;
 	padding: $distancia-principal;
 }

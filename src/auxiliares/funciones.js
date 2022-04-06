@@ -1,4 +1,8 @@
 // Definir URL entre categoria, tipoy week
 export const definirURLGeneral = (categoria, tipo, week) => {
-	week ? `${categoria}/${tipo}/${week}` : `${tipo}/${categoria}`;
+	if (week) {
+		return `${categoria}/${tipo}/${week}`;
+	} else {
+		return `${tipo}/${categoria}`;
+	}
 };

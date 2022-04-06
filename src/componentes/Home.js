@@ -1,4 +1,4 @@
-import GroupView from "./GroupView";
+import VistaGrupal from "./VistaGrupal";
 import CarruselHome from "./CarruselHome";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 import LoadingCircular from "./LoadingCircular";
@@ -29,14 +29,14 @@ const Home = () => {
 						tipo="movie"
 						categoria="now_playing"
 					/>
-					<GroupView
+					<VistaGrupal
 						titulo="PELICULAS TENDENCIAS"
 						isLoading={isLoadingGeneral}
 						result={result}
 						tipo="movie"
 						categoria="trending"
 					/>
-					<GroupView
+					<VistaGrupal
 						titulo="SERIES TENDENCIAS"
 						isLoading={isLoadingGeneral}
 						result={resultTv}
