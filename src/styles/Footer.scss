@@ -1,0 +1,34 @@
+@import "./Variables.scss";
+@import "./Mixin.scss";
+
+.footer {
+	width: 100%;
+	@include flex-colum-central;
+	box-shadow: $shadow-principal;
+	.footer-iconos-nav {
+		@include flex-central;
+		ul {
+			@include flex-central;
+			li {
+				@include flex-central;
+				list-style: none;
+				margin-right: $distancia-secundaria;
+				margin-left: $distancia-secundaria;
+				padding-right: $distancia-secundaria;
+				padding-left: $distancia-secundaria;
+			}
+		}
+	}
+	.footer-iconos-redes-sociales {
+		@include flex-central;
+		ul {
+			@include flex-central;
+			li {
+				@include flex-central;
+				align-items: center;
+				list-style: none;
+				margin: 5px;
+			}
+		}
+	}
+}

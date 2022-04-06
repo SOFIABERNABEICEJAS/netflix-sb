@@ -13,8 +13,19 @@
 		}
 	}
 
-	.slick-slide img {
+	.slick-slider img {
 		margin: auto;
 		position: relative;
 	}
+}
+
+.slick-slider {
+	justify-content: center;
+	align-items: center;
+}
+
+.slick-initialized {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

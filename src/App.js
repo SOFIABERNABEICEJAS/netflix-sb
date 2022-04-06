@@ -1,6 +1,7 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./componentes/Nav";
+import Footer from "./componentes/Footer";
 import Home from "./componentes/Home";
 import Busqueda from "./componentes/Busqueda";
 import SeccionPeliculasSeries from "./componentes/SeccionPeliculasSeries";
@@ -22,6 +23,7 @@ const App = () => {
 				<Route path="/search/:nombre" element={<Busqueda />} />
 				<Route path="*" element={<Error404 />} />
 			</Routes>
+			<Footer />
 		</BrowserRouter>
 	);
 };
