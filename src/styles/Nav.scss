@@ -3,25 +3,21 @@
 
 .nav {
 	width: 100%;
-	background-color: transparent;
 	color: $color-secuntario;
 	font-size: large;
 	box-shadow: $shadow-principal;
 	@include flex-alinear;
 	justify-content: space-between;
-	.nav-img {
-		width: 70px;
-	}
-}
 
-.nav-link {
-	@include flex-alinear;
-	ul {
-		@include flex-central;
-		li {
+	.nav-link {
+		@include flex-alinear;
+		ul {
 			@include flex-central;
-			list-style: none;
-			margin: $distancia-secundaria;
+			li {
+				@include flex-central;
+				list-style: none;
+				margin: $distancia-secundaria;
+			}
 		}
 	}
 }

@@ -7,6 +7,8 @@ export const definirURLGeneral = (categoria, tipo, week) => {
 	}
 };
 
+
+
 export const numeroCartas=()=>{
 	 const pantalla = window.innerWidth;
 
@@ -24,3 +26,4 @@ export const numeroCartas=()=>{
     return 1;
   }
 };
+

@@ -1,4 +1,5 @@
 import "../styles/Nav.scss";
+
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import * as React from "react";
@@ -42,23 +43,24 @@ const Nav = () => {
 	const handleChange = (e) => {
 		setValorDelInput(e.target.value);
 	};
-
+	const mobile = window.innerWidth < 600;
 	return (
 		<div className="nav">
-			<div className="nav-link">
-				<ul>
-					<Link to="/">
-						<li>INICIO</li>
-					</Link>
-
-					<Link to="/movie">
-						<li>PELICULAS</li>
-					</Link>
-					<Link to="/tv">
-						<li>SERIES</li>
-					</Link>
-				</ul>
-			</div>
+			{!mobile && (
+				<div className="nav-link">
+					<ul>
+						<Link to="/">
+							<li>INICIO</li>
+						</Link>
+						<Link to="/movie">
+							<li>PELICULAS</li>
+						</Link>
+						<Link to="/tv">
+							<li>SERIES</li>
+						</Link>
+					</ul>
+				</div>
+			)}
 			<div className="nav-input">
 				<form onSubmit={handleSubmit}>
 					<Box sx={{ display: "flex", alignItems: "flex-end" }}>
