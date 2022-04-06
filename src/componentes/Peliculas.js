@@ -1,8 +1,8 @@
-import GroupView from "./GroupView";
+import VistaGrupal from "./VistaGrupal";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 import LoadingCircular from "./LoadingCircular";
 
-const Movies = () => {
+const Peliculas = () => {
 	const { result, isLoading } = useFetchGeneral("popular", "movie", 1);
 	const { result: resultTopRated, isLoading: isLoadingTopRated } =
 		useFetchGeneral("top_rated", "movie", 1);
@@ -19,28 +19,28 @@ const Movies = () => {
 			<LoadingCircular isLoading={isLoading} />
 			{!isLoadingGeneral && (
 				<>
-					<GroupView
+					<VistaGrupal
 						titulo="PELÍCULAS POPULARES"
 						isLoading={isLoadingGeneral}
 						result={result}
 						categoria="popular"
 						tipo="movie"
 					/>
-					<GroupView
+					<VistaGrupal
 						titulo="PELÍCULAS CON MEJOR CRITICA"
 						isLoading={isLoadingGeneral}
 						result={resultTopRated}
 						tipo="movie"
 						categoria="top_rated"
 					/>
-					<GroupView
+					<VistaGrupal
 						titulo="PELICULAS A ESTRENARSE"
 						isLoading={isLoadingGeneral}
 						result={resultUpcoming}
 						tipo="movie"
 						categoria="upcoming"
 					/>
-					<GroupView
+					<VistaGrupal
 						titulo="PELICULAS EN EL CINE"
 						isLoading={isLoadingGeneral}
 						result={resultNowPlaying}
@@ -53,4 +53,4 @@ const Movies = () => {
 	);
 };
 
-export default Movies;
+export default Peliculas;

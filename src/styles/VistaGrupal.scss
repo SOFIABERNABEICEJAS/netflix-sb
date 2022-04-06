@@ -1,11 +1,11 @@
 @import "./Variables.scss";
 @import "./Mixin.scss";
 
-.gruop-view {
+.vista-grupal {
 	padding: 30px;
 	position: relative;
 
-	.gruop-view-title {
+	.vista-grupal-titulo {
 		@include flex-alinear;
 		margin: $distancia-secundaria;
 		h3 {

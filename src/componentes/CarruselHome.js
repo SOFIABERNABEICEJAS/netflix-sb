@@ -6,11 +6,11 @@ import "../styles/Carrusel.scss";
 
 const CarruselHome = ({ result, tipo }) => {
 	return (
-		<div className="container">
+		<div className="contenedor-carrusel">
 			<Slider arrows={false} dots={true} slidesToShow={1} autoplay={true}>
 				{result.map((curr) => (
 					<Link key={curr.id} to={`${tipo}/${curr.id}/info`}>
-						<article className="conteiner-carrusel">
+						<article>
 							<img
 								src={`https://image.tmdb.org/t/p/original/${curr.backdrop_path}`}
 							/>

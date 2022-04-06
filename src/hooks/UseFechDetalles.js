@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {
-	definirURLGeneral,
-	apiKey,
-	lenguaje,
-	paginas,
-} from "../auxiliares/variables";
+import { urlBase, apiKey, lenguaje, paginas } from "../auxiliares/variables";
 
 const UseFetchDetalles = () => {
 	const [infoDetalles, setInfoDetalles] = useState([]);

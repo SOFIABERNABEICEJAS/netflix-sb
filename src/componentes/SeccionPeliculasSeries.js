@@ -4,13 +4,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import LoadingCircular from "./LoadingCircular";
 import imagenRota from "../assets/imagenRota.png";
-import "../styles/SectionMovieTv.scss";
+import "../styles/SeccionPeliculasSeries.scss";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
-import IndividualView from "./IndividualView";
-
+import VistaIndividual from "./VistaIndividual";
 import Pagination from "@mui/material/Pagination";
 
-const SectionMovieTv = () => {
+const SeccionPeliculasSeries = () => {
 	const params = useParams();
 	const [page, setPage] = useState(1);
 	const { result, isLoading, totalPages } = useFetchGeneral(
@@ -56,14 +55,14 @@ const SectionMovieTv = () => {
 			<LoadingCircular isLoading={isLoading} />
 			{!isLoading && (
 				<>
-					<div className="conteiner-title">
+					<div className="contenedor-titulo">
 						<h3>{titulo()} </h3>
 					</div>
-					<div className="conteiner-sectionMovieTv">
-						<div className="conteiner-cards">
+					<div className="contenedor-seccionpeliculaSerie">
+						<div className="contenedor-cartas">
 							{result.map((curr) => (
 								<Link to={`/${params.tipo}/${curr.id}/info`}>
-									<IndividualView
+									<VistaIndividual
 										title={curr.title}
 										image={
 											curr.poster_path
@@ -75,7 +74,7 @@ const SectionMovieTv = () => {
 							))}
 						</div>
 					</div>
-					<div className="conteiner-sectionMovieTv conteiner-paginado">
+					<div className="contenedor-paginado">
 						<Pagination
 							count={totalPages > 500 ? 500 : totalPages}
 							page={page}
@@ -91,4 +90,4 @@ const SectionMovieTv = () => {
 	);
 };
 
-export default SectionMovieTv;
+export default SeccionPeliculasSeries;
