@@ -9,9 +9,8 @@ import InfoDetalles from "./componentes/InfoDetalles";
 import Peliculas from "./componentes/Peliculas";
 import Series from "./componentes/Series";
 import Error404 from "./componentes/Error404";
-
+import { mobile } from "./auxiliares/variables";
 const App = () => {
-	const mobile = window.innerWidth < 600;
 	return (
 		<BrowserRouter>
 			<Nav />
@@ -24,7 +23,7 @@ const App = () => {
 				<Route path="/search/:nombre" element={<Busqueda />} />
 				<Route path="*" element={<Error404 />} />
 			</Routes>
-			{window.innerWidth < 600 && <Footer />}
+			{mobile && <Footer />}
 		</BrowserRouter>
 	);
 };

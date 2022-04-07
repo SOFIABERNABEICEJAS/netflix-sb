@@ -164,6 +164,7 @@
 		align-items: center;
 		margin: 0%;
 		padding: 0%;
+		margin-bottom: 70px;
 		.infoDetalles-conteiner {
 			position: static;
 			width: 400px;
@@ -201,13 +202,12 @@
 						font-size: 18px;
 					}
 					h2 {
-						color: rgb(63, 63, 128);
+						color: $color-responsive;
 						font-size: 25px;
 					}
 					h3 {
 						margin-top: $distancia-responsive;
 						margin-left: Opx;
-						color: rgb(189, 185, 180);
 					}
 				}
 				.infoDetalles-conteiner-info {
@@ -228,5 +228,3 @@
 		}
 	}
 }
-
-//@media screen and (max-width: 900px) {

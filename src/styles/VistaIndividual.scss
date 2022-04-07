@@ -10,6 +10,7 @@
 	}
 	.cotenedor-ind-img {
 		height: 330px;
+		width: 100%;
 		overflow: hidden;
 		transform: scale(1);
 		img {
@@ -21,4 +22,17 @@
 .cotenedor-ind-img img:hover {
 	transform: scale(1.1);
 	transition: all 0.3s ease 0s, height 0s ease 0s;
+}
+
+//RESPONSIVE
+@media screen and (max-width: 600px) {
+	.vista-individual {
+		h3 {
+			margin-top: $distancia-responsive;
+		}
+		width: 200px;
+		.cotenedor-ind-img {
+			height: 300px;
+		}
+	}
 }

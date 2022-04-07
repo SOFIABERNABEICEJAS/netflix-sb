@@ -38,3 +38,23 @@
 	@include flex-alinear;
 	margin: $distancia-principal;
 }
+
+//RESPONSIVE
+@media screen and (max-width: 700px) {
+	.nav {
+		.nav-link {
+			@include flex-alinear;
+			.nav-link-logo {
+				@include flex-alinear;
+				width: 80px;
+			}
+			ul {
+				padding: 0%;
+				margin-left: 10px;
+				li {
+					margin: $distancia-secundaria;
+				}
+			}
+		}
+	}
+}

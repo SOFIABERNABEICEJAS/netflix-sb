@@ -51,7 +51,7 @@ const SeccionPeliculasSeries = () => {
 	};
 
 	return (
-		<div>
+		<section className="seccionPeliculasSeries">
 			<LoadingCircular isLoading={isLoading} />
 			{!isLoading && (
 				<>
@@ -86,7 +86,7 @@ const SeccionPeliculasSeries = () => {
 					</div>
 				</>
 			)}
-		</div>
+		</section>
 	);
 };
 
