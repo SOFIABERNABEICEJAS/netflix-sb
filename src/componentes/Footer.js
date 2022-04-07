@@ -16,29 +16,23 @@ const Footer = () => {
 								{!mobile && (
 									<HomeIcon
 										fontSize="large"
-										area-label="icono para incresar a home"
+										aria-label="icono para incresar a secciom home"
 									/>
 								)}
 								{mobile && (
-									<HomeIcon
-										color="primary"
-										area-label="icono para incresar a home"
-									/>
+									<HomeIcon aria-label="icono para incresar a seccion home" />
 								)}
 							</li>
 						</Link>
 						<Link to="/movie">
 							<li>
 								{mobile && (
-									<VideocamIcon
-										color="primary"
-										area-label="icono para ingresar a peliculas"
-									/>
+									<VideocamIcon aria-label="icono para ingresar a seccion peliculas" />
 								)}
 								{!mobile && (
 									<VideocamIcon
 										fontSize="large"
-										area-label="icono para ingresar a peliculas"
+										aria-label="icono para ingresar a seccion peliculas"
 									/>
 								)}
 							</li>
@@ -46,15 +40,12 @@ const Footer = () => {
 						<Link to="/tv">
 							<li>
 								{mobile && (
-									<LiveTvIcon
-										color="primary"
-										area-label="icono para ingresa a series"
-									/>
+									<LiveTvIcon aria-label="icono para ingresa a seccion series" />
 								)}
 								{!mobile && (
 									<LiveTvIcon
 										fontSize="large"
-										area-label="icono para ingresa a series"
+										aria-label="icono para ingresa a seccion series"
 									/>
 								)}
 							</li>

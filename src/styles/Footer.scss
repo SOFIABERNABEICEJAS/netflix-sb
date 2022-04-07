@@ -3,7 +3,6 @@
 
 .footer {
 	width: 100%;
-	height: 70px;
 	@include flex-colum-central;
 	box-shadow: $shadow-principal;
 	.footer-iconos-nav {
@@ -24,11 +23,8 @@
 }
 
 @media screen and (max-width: 500px) {
-	.footer {
-		height: 60px;
-		.footer-iconos-nav {
-			@include flex-central-alinear;
-			width: 200px;
-		}
+	.footer-iconos-nav {
+		@include flex-central-alinear;
+		width: 200px;
 	}
 }

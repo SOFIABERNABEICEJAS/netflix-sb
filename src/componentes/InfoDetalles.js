@@ -3,6 +3,7 @@ import UseFetchDetalles from "../hooks/UseFechDetalles";
 import "../styles/InfoDetalles.scss";
 import LoadingCircular from "./LoadingCircular";
 import imagenRota from "../assets/imagenRota.png";
+import { mobileInfoDetallada, tablet } from "../auxiliares/variables";
 
 const InfoDetalles = () => {
 	const params = useParams();
@@ -20,22 +21,36 @@ const InfoDetalles = () => {
 	const año = fecha.getFullYear();
 
 	return (
-		<div>
+		<div className="infoDetalles">
 			<LoadingCircular isLoading={isLoading} />
 			{!isLoading && (
 				<>
-					<div
-						className="infoDetalles-fondo"
-						style={{
-							backgroundImage:
-								"url(" +
-								`https://image.tmdb.org/t/p/original/${infoDetalles.backdrop_path}` +
-								")",
-							backgroundSize: "cover",
-							backgroundPosition: "center",
-							minHeight: "100vh",
-						}}
-					></div>
+					{!tablet && (
+						<div
+							className="infoDetalles-fondo"
+							style={{
+								backgroundImage:
+									"url(" +
+									`https://image.tmdb.org/t/p/original/${infoDetalles.backdrop_path}` +
+									")",
+								backgroundSize: "cover",
+								backgroundPosition: "center",
+								minHeight: "100vh",
+							}}
+						></div>
+					)}
+					{tablet && (
+						<div className="infoDetalles-imagen-mobile">
+							<img
+								src={
+									infoDetalles.backdrop_path
+										? `https://image.tmdb.org/t/p/original/${infoDetalles.backdrop_path}`
+										: imagenRota
+								}
+							></img>
+						</div>
+					)}
+
 					<div className="infoDetalles-conteiner">
 						<div className="infoDetalles-conteiner-img">
 							<img
