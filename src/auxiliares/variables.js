@@ -4,3 +4,4 @@ export const paginas = "&page=";
 export const lenguaje = "&language=";
 export const mobileInfoDetallada = window.innerWidth < 600;
 export const tablet = window.innerWidth < 950;
+export const mobile = window.innerWidth < 500;

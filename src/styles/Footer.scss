@@ -2,16 +2,21 @@
 @import "./Mixin.scss";
 
 .footer {
+	position: fixed;
+	z-index: 2;
+	bottom: 0;
 	width: 100%;
+	height: 90px;
+	background-color: $color-primario;
 	@include flex-colum-central;
 	box-shadow: $shadow-principal;
 	.footer-iconos-nav {
-		@include flex-central-alinear;
+		@include flex-central;
 		width: 300px;
 		ul {
 			@include flex-alinear;
+			justify-content: center;
 			width: 100%;
-			padding: 0%;
 			justify-content: space-between;
 			a {
 				li {
@@ -24,7 +29,6 @@
 
 @media screen and (max-width: 500px) {
 	.footer-iconos-nav {
-		@include flex-central-alinear;
 		width: 200px;
 	}
 }
