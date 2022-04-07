@@ -1,9 +1,12 @@
+@import "./Variables.scss";
+@import "./Mixin.scss";
+
 .loader {
 	position: absolute;
-	top: 150px;
-	left: 550px;
-	border: 16px solid #e5e8eb;
-	border-top: 16px solid #868383;
+	top: 50%;
+	left: 50%;
+	border: 16px solid $color-secuntario;
+	border-top: 16px solid $color-terciario;
 	border-radius: 50%;
 	width: 80px;
 	height: 80px;
@@ -16,5 +19,12 @@
 	}
 	100% {
 		transform: rotate(360deg);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.loader {
+		border: 16px solid $color-responsive;
+		border-top: 16px solid $color-terciario;
 	}
 }
