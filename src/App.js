@@ -11,6 +11,7 @@ import Series from "./componentes/Series";
 import Error404 from "./componentes/Error404";
 
 const App = () => {
+	const mobile = window.innerWidth < 600;
 	return (
 		<BrowserRouter>
 			<Nav />
@@ -23,7 +24,7 @@ const App = () => {
 				<Route path="/search/:nombre" element={<Busqueda />} />
 				<Route path="*" element={<Error404 />} />
 			</Routes>
-			<Footer />
+			{window.innerWidth < 600 && <Footer />}
 		</BrowserRouter>
 	);
 };

@@ -11,7 +11,7 @@ const UseFetchGeneral = (categoria, tipo, page) => {
 		categoria,
 		tipo,
 		categoria === "trending" ? "week" : ""
-	)}?${apiKey}${lenguaje}es-AR${paginas}${page}`;
+	)}?${apiKey}${lenguaje}es${paginas}${page}`;
 
 	useEffect(() => {
 		setIsLoading(true);

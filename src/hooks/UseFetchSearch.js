@@ -10,7 +10,7 @@ const UseFechSearch = (page) => {
 	useEffect(() => {
 		setIsloading(true);
 		fetch(
-			`${urlBase}search/multi?${apiKey}&query=${params.nombre}${lenguaje}es-AR${paginas}${page}`
+			`${urlBase}search/multi?${apiKey}&query=${params.nombre}${lenguaje}es${paginas}${page}`
 		)
 			.then((res) => res.json())
 			.then((data) => {

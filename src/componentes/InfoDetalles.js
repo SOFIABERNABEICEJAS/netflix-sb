@@ -51,7 +51,7 @@ const InfoDetalles = () => {
 						</div>
 					)}
 
-					<div className="infoDetalles-conteiner">
+					<article className="infoDetalles-conteiner">
 						<div className="infoDetalles-conteiner-img">
 							<img
 								src={
@@ -134,7 +134,7 @@ const InfoDetalles = () => {
 								</ul>
 							</div>
 						</div>
-					</div>
+					</article>
 				</>
 			)}
 		</div>

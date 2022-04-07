@@ -7,7 +7,7 @@ const UseFetchDetalles = () => {
 	const [isLoading, setIsloading] = useState(false);
 	const params = useParams();
 
-	const url = `${urlBase}${params.tipo}/${params.id}?${apiKey}${lenguaje}es-AR${paginas}1`;
+	const url = `${urlBase}${params.tipo}/${params.id}?${apiKey}${lenguaje}es${paginas}1`;
 
 	useEffect(() => {
 		setIsloading(true);

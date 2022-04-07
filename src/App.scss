@@ -3,10 +3,13 @@
 
 * {
 	color: $color-secuntario;
+	a {
+		color: $color-secuntario;
+	}
 }
 body {
 	margin: 0;
-	background-color: black;
+	background-color: $color-primario;
 	h1,
 	h2,
 	h3,
