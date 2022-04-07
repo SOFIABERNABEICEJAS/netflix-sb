@@ -12,22 +12,15 @@
 			margin-right: $distancia-secundaria;
 		}
 	}
-	
+
 	.slick-slide img {
 		margin: auto;
 		position: relative;
 	}
-
 }
 
-.slick-slider {
-	justify-content: center;
-	align-items: center;
-}
-
-.slick-initialized {
+.vista-grupal-contenedor-vista-individual {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-

@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick-theme.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { numeroCartas } from "../auxiliares/funciones";
 
-
 const VistaGrupal = ({ titulo, result, tipo, categoria }) => {
 	return (
 		<div className="vista-grupal">
@@ -20,18 +19,18 @@ const VistaGrupal = ({ titulo, result, tipo, categoria }) => {
 			</Link>
 
 			<Slider arrows={true} slidesToShow={numeroCartas()}>
-
-			
 				{result.map((curr) => (
 					<Link to={`/${tipo}/${curr.id}/info`} key="curr.id">
-						<VistaIndividual
-							title={curr.title || curr.name}
-							image={
-								curr.poster_path
-									? `https://image.tmdb.org/t/p/w500/${curr.poster_path}`
-									: imagenRota
-							}
-						/>
+						<div className="vista-grupal-contenedor-vista-individual">
+							<VistaIndividual
+								title={curr.title || curr.name}
+								image={
+									curr.poster_path
+										? `https://image.tmdb.org/t/p/w500/${curr.poster_path}`
+										: imagenRota
+								}
+							/>
+						</div>
 					</Link>
 				))}
 			</Slider>
