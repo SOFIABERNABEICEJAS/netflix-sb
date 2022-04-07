@@ -1,5 +1,5 @@
 import "../styles/Nav.scss";
-
+import logo from "../assets/logoPeliculasSeries.png";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import * as React from "react";
@@ -48,6 +48,9 @@ const Nav = () => {
 		<div className="nav">
 			{!mobile && (
 				<div className="nav-link">
+					<div className="nav-link-logo">
+						<img src={logo} alt="logo de un carrusel de pelicula"></img>
+					</div>
 					<ul>
 						<Link to="/">
 							<li>INICIO</li>
