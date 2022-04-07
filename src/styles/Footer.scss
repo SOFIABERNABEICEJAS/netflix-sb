@@ -3,32 +3,32 @@
 
 .footer {
 	width: 100%;
+	height: 70px;
 	@include flex-colum-central;
 	box-shadow: $shadow-principal;
 	.footer-iconos-nav {
-		@include flex-central;
+		@include flex-central-alinear;
+		width: 300px;
 		ul {
-			@include flex-central;
-			li {
-				@include flex-central;
-				list-style: none;
-				margin-right: $distancia-secundaria;
-				margin-left: $distancia-secundaria;
-				padding-right: $distancia-secundaria;
-				padding-left: $distancia-secundaria;
+			@include flex-alinear;
+			width: 100%;
+			padding: 0%;
+			justify-content: space-between;
+			a {
+				li {
+					list-style: none;
+				}
 			}
 		}
 	}
-	.footer-iconos-redes-sociales {
-		@include flex-central;
-		ul {
-			@include flex-central;
-			li {
-				@include flex-central;
-				align-items: center;
-				list-style: none;
-				margin: 5px;
-			}
+}
+
+@media screen and (max-width: 500px) {
+	.footer {
+		height: 60px;
+		.footer-iconos-nav {
+			@include flex-central-alinear;
+			width: 200px;
 		}
 	}
 }

@@ -13,17 +13,50 @@ const Footer = () => {
 					<ul>
 						<Link to="/">
 							<li>
-								<HomeIcon fontSize="large" />
+								{!mobile && (
+									<HomeIcon
+										fontSize="large"
+										area-label="icono para incresar a home"
+									/>
+								)}
+								{mobile && (
+									<HomeIcon
+										color="primary"
+										area-label="icono para incresar a home"
+									/>
+								)}
 							</li>
 						</Link>
 						<Link to="/movie">
 							<li>
-								<VideocamIcon fontSize="large" />
+								{mobile && (
+									<VideocamIcon
+										color="primary"
+										area-label="icono para ingresar a peliculas"
+									/>
+								)}
+								{!mobile && (
+									<VideocamIcon
+										fontSize="large"
+										area-label="icono para ingresar a peliculas"
+									/>
+								)}
 							</li>
 						</Link>
 						<Link to="/tv">
 							<li>
-								<LiveTvIcon fontSize="large" />
+								{mobile && (
+									<LiveTvIcon
+										color="primary"
+										area-label="icono para ingresa a series"
+									/>
+								)}
+								{!mobile && (
+									<LiveTvIcon
+										fontSize="large"
+										area-label="icono para ingresa a series"
+									/>
+								)}
 							</li>
 						</Link>
 					</ul>

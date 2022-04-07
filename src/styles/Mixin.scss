@@ -18,3 +18,8 @@
 	display: flex;
 	flex-direction: column;
 }
+@mixin flex-central-alinear {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
