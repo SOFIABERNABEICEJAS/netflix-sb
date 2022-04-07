@@ -8,6 +8,7 @@ import "../styles/SeccionPeliculasSeries.scss";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 import VistaIndividual from "./VistaIndividual";
 import Pagination from "@mui/material/Pagination";
+import { mobile } from "../auxiliares/variables";
 
 const SeccionPeliculasSeries = () => {
 	const params = useParams();
@@ -75,14 +76,27 @@ const SeccionPeliculasSeries = () => {
 						</div>
 					</div>
 					<div className="contenedor-paginado">
-						<Pagination
-							count={totalPages > 500 ? 500 : totalPages}
-							page={page}
-							onChange={handleChange}
-							variant="outlined"
-							shape="rounded"
-							color="primary"
-						/>
+						{mobile && (
+							<Pagination
+								size="small"
+								count={totalPages > 500 ? 500 : totalPages}
+								page={page}
+								onChange={handleChange}
+								variant="outlined"
+								shape="rounded"
+								color="primary"
+							/>
+						)}
+						{!mobile && (
+							<Pagination
+								count={totalPages > 500 ? 500 : totalPages}
+								page={page}
+								onChange={handleChange}
+								variant="outlined"
+								shape="rounded"
+								color="primary"
+							/>
+						)}
 					</div>
 				</>
 			)}

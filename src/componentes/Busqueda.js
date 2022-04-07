@@ -6,6 +6,7 @@ import useFetchSerch from "../hooks/UseFetchSearch";
 import LoadingCircular from "./LoadingCircular";
 import Pagination from "@mui/material/Pagination";
 import { useState } from "react";
+import { mobile } from "../auxiliares/variables";
 
 const Busqueda = () => {
 	const [page, setPage] = useState(1);
@@ -39,14 +40,27 @@ const Busqueda = () => {
 						</div>
 					</div>
 					<div className="contenedor-paginado">
-						<Pagination
-							count={totalPages > 500 ? 500 : totalPages}
-							page={page}
-							onChange={handleChange}
-							variant="outlined"
-							shape="rounded"
-							color="primary"
-						/>
+						{mobile && (
+							<Pagination
+								size="small"
+								count={totalPages > 500 ? 500 : totalPages}
+								page={page}
+								onChange={handleChange}
+								variant="outlined"
+								shape="rounded"
+								color="primary"
+							/>
+						)}
+						{!mobile && (
+							<Pagination
+								count={totalPages > 500 ? 500 : totalPages}
+								page={page}
+								onChange={handleChange}
+								variant="outlined"
+								shape="rounded"
+								color="primary"
+							/>
+						)}
 					</div>
 				</>
 			)}

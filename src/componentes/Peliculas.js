@@ -15,7 +15,7 @@ const Peliculas = () => {
 		isLoading || isLoadingTopRated || isLoadingUpcoming || isLoadingNowPlaying;
 
 	return (
-		<div>
+		<section>
 			<LoadingCircular isLoading={isLoading} />
 			{!isLoadingGeneral && (
 				<>
@@ -49,7 +49,7 @@ const Peliculas = () => {
 					/>
 				</>
 			)}
-		</div>
+		</section>
 	);
 };
 

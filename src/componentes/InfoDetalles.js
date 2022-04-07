@@ -3,7 +3,7 @@ import UseFetchDetalles from "../hooks/UseFechDetalles";
 import "../styles/InfoDetalles.scss";
 import LoadingCircular from "./LoadingCircular";
 import imagenRota from "../assets/imagenRota.png";
-import { mobileInfoDetallada, tablet } from "../auxiliares/variables";
+import { tablet } from "../auxiliares/variables";
 
 const InfoDetalles = () => {
 	const params = useParams();
