@@ -2,15 +2,13 @@
 @import "./Mixin.scss";
 
 .contenedor-error404 {
-	@include flex-central;
+	@include flex-central-alinear;
 	margin: $distancia-principal;
+	margin-bottom: 70px;
 	.contenedor-error404-img {
 		@include flex-central;
 		img {
 			width: 100%;
 		}
 	}
-}
-
-@media screen and (max-widh: 500px) {
 }
