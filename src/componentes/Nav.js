@@ -9,6 +9,8 @@ import { styled } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import { mobile } from "../auxiliares/variables";
 
+
+//estilos del imput buscar 
 const CssTextField = styled(TextField)({
 	"& label.Mui-focused": {
 		color: "white",
@@ -68,7 +70,7 @@ const Nav = () => {
 			<div className="nav-input">
 				<form onSubmit={handleSubmit}>
 					<Box sx={{ display: "flex", alignItems: "flex-end" }}>
-						<SearchIcon sx={{ mr: 1, my: 2 }} />{" "}
+						<SearchIcon sx={{ mr: 1, my: 2 }} aria-label="icono de lupa" />{" "}
 						<CssTextField
 							label="Busqueda..."
 							onChange={handleChange}

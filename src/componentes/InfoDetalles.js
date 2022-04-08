@@ -12,7 +12,6 @@ const InfoDetalles = () => {
 		params.id,
 		1
 	);
-
 	const fecha = new Date(
 		infoDetalles.release_date
 			? infoDetalles.release_date
