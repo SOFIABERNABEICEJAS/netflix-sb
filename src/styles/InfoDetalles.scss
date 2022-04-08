@@ -76,6 +76,29 @@
 }
 
 //RESPONSIVE
+@media screen and (max-width: 1300px) {
+	.infoDetalles-conteiner {
+		position: absolute;
+		right: 200px;
+		top: 150px;
+		.infoDetalles-conteiner-img {
+			width: 300px;
+			height: 400px;
+		}
+		.infoDetalles-conteiner-texto {
+			width: 650px;
+			.infoDetalles-conteiner-title {
+				p {
+					font-size: 25px;
+				}
+				h2 {
+					font-size: 45px;
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 1040px) {
 	.infoDetalles-conteiner {
 		position: absolute;

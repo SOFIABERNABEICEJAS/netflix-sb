@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import VistaIndividual from "./VistaIndividual";
 import imagenRota from "../assets/imagenRota.png";
-import "../styles/SeccionPeliculasSeries.scss";
+import "../styles/PeliculasSeries.scss";
 import useFetchSerch from "../hooks/UseFetchSearch";
 import LoadingCircular from "./LoadingCircular";
 import Pagination from "@mui/material/Pagination";
@@ -16,14 +16,14 @@ const Busqueda = () => {
 		setPage(value);
 	};
 	return (
-		<div>
+		<div className="peliculasSeries">
 			<LoadingCircular isLoading={isLoading} />
 			{!isLoading && (
 				<>
 					<div className="contenedor-titulo">
 						<h3>RESULTADO DE BUSQUEDA</h3>
 					</div>
-					<div className="contenedor-seccionpeliculaSerie">
+					<div className="contenedor-peliculasSerie">
 						<div className="contenedor-cartas">
 							{result.map((curr) => (
 								<Link to={`/movie/${curr.id}/info`} key={curr.id}>

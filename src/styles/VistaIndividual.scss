@@ -10,7 +10,6 @@
 	}
 	.cotenedor-ind-img {
 		height: 330px;
-		width: 100%;
 		overflow: hidden;
 		transform: scale(1);
 		img {
@@ -25,8 +24,10 @@
 }
 
 //RESPONSIVE
+
 @media screen and (max-width: 600px) {
 	.vista-individual {
+		margin: 25px;
 		h3 {
 			margin-top: $distancia-responsive;
 		}

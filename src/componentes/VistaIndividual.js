@@ -1,12 +1,12 @@
 import "../styles/VistaIndividual.scss";
 
-const VistaIndividual = ({ title, image }) => {
+const VistaIndividual = ({ titulo, image }) => {
 	return (
 		<article className="vista-individual">
 			<div className="cotenedor-ind-img">
-				<img src={image} alt={title} />
+				<img src={image} alt={titulo} />
 			</div>
-			<h3>{title}</h3>
+			<h3>{titulo}</h3>
 		</article>
 	);
 };
