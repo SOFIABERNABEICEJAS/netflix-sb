@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
+import { mobile } from "../auxiliares/variables";
 
 const CssTextField = styled(TextField)({
 	"& label.Mui-focused": {
@@ -43,9 +44,9 @@ const Nav = () => {
 	const handleChange = (e) => {
 		setValorDelInput(e.target.value);
 	};
-	const mobile = window.innerWidth < 600;
+
 	return (
-		<div className="nav">
+		<nav className="nav">
 			{!mobile && (
 				<div className="nav-link">
 					<div className="nav-link-logo">
@@ -76,7 +77,7 @@ const Nav = () => {
 					</Box>
 				</form>
 			</div>
-		</div>
+		</nav>
 	);
 };
 

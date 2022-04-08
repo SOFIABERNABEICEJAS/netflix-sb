@@ -10,6 +10,7 @@ import Peliculas from "./componentes/Peliculas";
 import Series from "./componentes/Series";
 import Error404 from "./componentes/Error404";
 import { mobile } from "./auxiliares/variables";
+
 const App = () => {
 	return (
 		<BrowserRouter>

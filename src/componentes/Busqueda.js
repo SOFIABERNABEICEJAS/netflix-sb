@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import VistaIndividual from "./VistaIndividual";
 import imagenRota from "../assets/imagenRota.png";
-import "../styles/SeccionPeliculasSeries.scss";
+import "../styles/PeliculasSeries.scss";
 import useFetchSerch from "../hooks/UseFetchSearch";
 import LoadingCircular from "./LoadingCircular";
 import Pagination from "@mui/material/Pagination";
 import { useState } from "react";
+import { mobile } from "../auxiliares/variables";
 
 const Busqueda = () => {
 	const [page, setPage] = useState(1);
@@ -15,14 +16,14 @@ const Busqueda = () => {
 		setPage(value);
 	};
 	return (
-		<div>
+		<div className="peliculasSeries">
 			<LoadingCircular isLoading={isLoading} />
 			{!isLoading && (
 				<>
 					<div className="contenedor-titulo">
 						<h3>RESULTADO DE BUSQUEDA</h3>
 					</div>
-					<div className="contenedor-seccionpeliculaSerie">
+					<div className="contenedor-peliculasSerie">
 						<div className="contenedor-cartas">
 							{result.map((curr) => (
 								<Link to={`/movie/${curr.id}/info`} key={curr.id}>
@@ -39,14 +40,27 @@ const Busqueda = () => {
 						</div>
 					</div>
 					<div className="contenedor-paginado">
-						<Pagination
-							count={totalPages > 500 ? 500 : totalPages}
-							page={page}
-							onChange={handleChange}
-							variant="outlined"
-							shape="rounded"
-							color="primary"
-						/>
+						{mobile && (
+							<Pagination
+								size="small"
+								count={totalPages > 500 ? 500 : totalPages}
+								page={page}
+								onChange={handleChange}
+								variant="outlined"
+								shape="rounded"
+								color="primary"
+							/>
+						)}
+						{!mobile && (
+							<Pagination
+								count={totalPages > 500 ? 500 : totalPages}
+								page={page}
+								onChange={handleChange}
+								variant="outlined"
+								shape="rounded"
+								color="primary"
+							/>
+						)}
 					</div>
 				</>
 			)}

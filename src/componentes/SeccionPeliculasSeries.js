@@ -4,10 +4,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import LoadingCircular from "./LoadingCircular";
 import imagenRota from "../assets/imagenRota.png";
-import "../styles/SeccionPeliculasSeries.scss";
+import "../styles/PeliculasSeries.scss";
 import useFetchGeneral from "../hooks/UseFetchGeneral";
 import VistaIndividual from "./VistaIndividual";
 import Pagination from "@mui/material/Pagination";
+import { mobile } from "../auxiliares/variables";
 
 const SeccionPeliculasSeries = () => {
 	const params = useParams();
@@ -25,7 +26,7 @@ const SeccionPeliculasSeries = () => {
 			return "PELÍCULAS POPULARES";
 		}
 		if (params.tipo === "movie" && params.categoria === "top_rated") {
-			return "PELÍCULAS CON MEJOR CRITICA";
+			return "PELÍCULAS CON MEJORES CRÍTICAS";
 		}
 		if (params.tipo === "movie" && params.categoria === "upcoming") {
 			return "PELICULAS A ESTRENARSE";
@@ -34,7 +35,7 @@ const SeccionPeliculasSeries = () => {
 			return "PELICULAS TENDENCIAS";
 		}
 		if (params.tipo === "movie" && params.categoria === "now_playing") {
-			return "PROXIMAMENTO EN EL CINE";
+			return "PROXIMAMENTO EN CINE";
 		}
 		if (params.tipo === "tv" && params.categoria === "trending") {
 			return "SERIES TENDENCIAS";
@@ -51,19 +52,19 @@ const SeccionPeliculasSeries = () => {
 	};
 
 	return (
-		<section className="seccionPeliculasSeries">
+		<section className="peliculasSeries">
 			<LoadingCircular isLoading={isLoading} />
 			{!isLoading && (
 				<>
 					<div className="contenedor-titulo">
 						<h3>{titulo()} </h3>
 					</div>
-					<div className="contenedor-seccionpeliculaSerie">
+					<div className="contenedor-peliculasSerie">
 						<div className="contenedor-cartas">
 							{result.map((curr) => (
-								<Link to={`/${params.tipo}/${curr.id}/info`}>
+								<Link to={`/${params.tipo}/${curr.id}/info`} key={curr.id}>
 									<VistaIndividual
-										title={curr.title}
+										titulo={curr.title ? curr.title : curr.name}
 										image={
 											curr.poster_path
 												? `https://image.tmdb.org/t/p/w500/${curr.poster_path}`
@@ -75,14 +76,27 @@ const SeccionPeliculasSeries = () => {
 						</div>
 					</div>
 					<div className="contenedor-paginado">
-						<Pagination
-							count={totalPages > 500 ? 500 : totalPages}
-							page={page}
-							onChange={handleChange}
-							variant="outlined"
-							shape="rounded"
-							color="primary"
-						/>
+						{mobile && (
+							<Pagination
+								size="small"
+								count={totalPages > 500 ? 500 : totalPages}
+								page={page}
+								onChange={handleChange}
+								variant="outlined"
+								shape="rounded"
+								color="primary"
+							/>
+						)}
+						{!mobile && (
+							<Pagination
+								count={totalPages > 500 ? 500 : totalPages}
+								page={page}
+								onChange={handleChange}
+								variant="outlined"
+								shape="rounded"
+								color="primary"
+							/>
+						)}
 					</div>
 				</>
 			)}

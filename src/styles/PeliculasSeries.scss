@@ -11,7 +11,7 @@
 	}
 }
 
-.contenedor-seccionpeliculaSerie {
+.contenedor-peliculasSerie {
 	@include flex-colum-central;
 	.contenedor-cartas {
 		display: flex;
@@ -30,9 +30,9 @@
 }
 
 //RESPONSIVE
+
 @media screen and (max-width: 600px) {
-	.seccionPeliculasSeries {
-		@include flex-colum-central;
+	.peliculasSeries {
 		margin-bottom: 70px;
 	}
 }

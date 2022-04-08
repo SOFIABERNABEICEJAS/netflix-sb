@@ -20,10 +20,10 @@ const VistaGrupal = ({ titulo, result, tipo, categoria }) => {
 
 			<Slider arrows={true} slidesToShow={numeroCartas()}>
 				{result.map((curr) => (
-					<Link to={`/${tipo}/${curr.id}/info`} key="curr.id">
+					<Link to={`/${tipo}/${curr.id}/info`} key={curr.id}>
 						<div className="vista-grupal-contenedor-vista-individual">
 							<VistaIndividual
-								title={curr.title || curr.name}
+								title={curr.title ? curr.title : curr.name}
 								image={
 									curr.poster_path
 										? `https://image.tmdb.org/t/p/w500/${curr.poster_path}`

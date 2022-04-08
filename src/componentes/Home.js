@@ -17,7 +17,7 @@ const Home = () => {
 		useFetchGeneral("now_playing", "movie", 1);
 
 	const isLoadingGeneral = isLoading || isLoadingTv || isLoadingCarrusel;
-	console.log(window);
+
 	return (
 		<section className="home">
 			<LoadingCircular isLoading={isLoading} />
