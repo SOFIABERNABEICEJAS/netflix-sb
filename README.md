@@ -1,30 +1,27 @@
 ![Proyecto-final](proyecto-final.png)
 
-## Proyecto: Netflix SB :movie_camera
+## Proyecto: Netflix 🎬
 
 Netflix SB te permite ver y buscar peliculas y series e informarte sobre últimos lanzamientos, sólo en cine , populares, entre otros.
 Es el último trabajo realizado en el curso de ADA.
 
-\_
 &nbsp;
 
 ```
-                                                           🎬 Proyecto
-```
 
-&nbsp;
+
 
 #### Link al proyecto [Netflix SB](https://sofiabernabeicejas.github.io/NetflixSB/) 🌍 ✔
 
 ### PROYECTO:
 
-- [x] 🎬 Home
-- [x] 🎬 Peliculas
-- [x] 🎬 Series
-- [x] 🎬 Busqueda
-- [x] 🎬 Secciones
-- [x] 🎬 Carruseles
-- [x] 🎬 Vista individual
+- [x]  Home
+- [x]  Peliculas
+- [x]  Series
+- [x]  Busqueda
+- [x]  Secciones
+- [x]  Carruseles
+- [x]  Vista individual
 - [x] 🎬 Información detallada de películas y series
 
 ### Tecnologías utilizadas:
@@ -51,5 +48,13 @@ Es el último trabajo realizado en el curso de ADA.
 ### Librerías utilizadas:
 
 - Material MAU : paginado, texticonos.
-
 - React Slick: Carrusel.
+
+-
+```
+
+&nbsp;
+
+```
+        Con mucho amor Sofi Bernabei 🤍
+```

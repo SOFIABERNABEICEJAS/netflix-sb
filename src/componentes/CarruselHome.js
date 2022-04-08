@@ -13,6 +13,7 @@ const CarruselHome = ({ result, tipo }) => {
 						<article>
 							<img
 								src={`https://image.tmdb.org/t/p/original/${curr.backdrop_path}`}
+								alt="curr.name ? curr.name : curr.title"
 							/>
 						</article>
 					</Link>
