@@ -2,14 +2,14 @@ import HomeIcon from "@mui/icons-material/Home";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import { Link } from "react-router-dom";
-import "../styles/Footer.scss";
+import "../styles/NavResponsive.scss";
 
-const Footer = () => {
+const NavResponsive = () => {
 	const mobile = window.innerWidth < 600;
 	return (
-		<footer className="footer">
+		<section className="nav-responsive">
 			{mobile && (
-				<div className="footer-iconos-nav">
+				<div className="nav-responsive-iconos">
 					<ul>
 						<Link to="/">
 							<li>
@@ -38,7 +38,7 @@ const Footer = () => {
 					</ul>
 				</div>
 			)}
-		</footer>
+		</section>
 	);
 };
-export default Footer;
+export default NavResponsive;
