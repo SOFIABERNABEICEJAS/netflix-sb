@@ -14,7 +14,7 @@ const VistaGrupal = ({ titulo, result, tipo, categoria }) => {
 			<Link to={`/${tipo}/${categoria}`}>
 				<div className="vista-grupal-titulo">
 					<h3>{titulo} </h3>
-					<ArrowForwardIosIcon aria-label="arrow" fontSize="small" />
+					<ArrowForwardIosIcon aria-label="icono de flecha" fontSize="small" />
 				</div>
 			</Link>
 
