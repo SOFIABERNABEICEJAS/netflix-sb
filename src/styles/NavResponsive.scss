@@ -15,9 +15,9 @@
 		width: 300px;
 		ul {
 			@include flex-alinear;
-			justify-content: center;
 			width: 100%;
 			justify-content: space-between;
+			padding: 0%;
 			a {
 				li {
 					list-style: none;
