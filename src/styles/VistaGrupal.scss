@@ -4,6 +4,7 @@
 .vista-grupal {
 	padding: 30px;
 	margin: auto;
+	position: relative;
 
 	.vista-grupal-titulo {
 		@include flex-alinear;

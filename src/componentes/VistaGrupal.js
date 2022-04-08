@@ -23,7 +23,7 @@ const VistaGrupal = ({ titulo, result, tipo, categoria }) => {
 					<Link to={`/${tipo}/${curr.id}/info`} key={curr.id}>
 						<div className="vista-grupal-contenedor-vista-individual">
 							<VistaIndividual
-								title={curr.title ? curr.title : curr.name}
+								titulo={curr.title ? curr.title : curr.name}
 								image={
 									curr.poster_path
 										? `https://image.tmdb.org/t/p/w500/${curr.poster_path}`

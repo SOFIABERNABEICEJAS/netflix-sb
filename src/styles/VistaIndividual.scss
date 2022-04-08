@@ -4,12 +4,13 @@
 .vista-individual {
 	display: inline-block;
 	width: 220px;
+	height: 330;
 	margin: $distancia-secundaria;
 	h3 {
 		margin-top: $distancia-secundaria;
 	}
 	.cotenedor-ind-img {
-		height: 330px;
+		height: 330;
 		overflow: hidden;
 		transform: scale(1);
 		img {

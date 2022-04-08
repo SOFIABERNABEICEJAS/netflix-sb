@@ -1,7 +1,7 @@
 @import "./Variables.scss";
 @import "./Mixin.scss";
 
-.footer {
+.nav-responsive {
 	position: fixed;
 	z-index: 2;
 	bottom: 0;
@@ -10,7 +10,7 @@
 	background-color: $color-primario;
 	@include flex-colum-central;
 	box-shadow: $shadow-principal;
-	.footer-iconos-nav {
+	.nav-responsive-iconos {
 		@include flex-central;
 		width: 300px;
 		ul {

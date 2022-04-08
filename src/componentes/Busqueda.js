@@ -28,7 +28,7 @@ const Busqueda = () => {
 							{result.map((curr) => (
 								<Link to={`/movie/${curr.id}/info`} key={curr.id}>
 									<VistaIndividual
-										title={curr.title}
+										titulo={curr.title ? curr.title : curr.name}
 										image={
 											curr.poster_path
 												? `https://image.tmdb.org/t/p/w500/${curr.poster_path}`
