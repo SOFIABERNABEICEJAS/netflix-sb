@@ -48,8 +48,8 @@ const InfoDetalles = () => {
 												infoDetalles.backdrop_path
 										  } alt="${
 												infoDetalles.name
-													? infodetalles.name
-													: infodetalles.title
+													? infoDetalles.name
+													: infoDetalles.title
 										  }"`
 										: imagenRota
 								}
