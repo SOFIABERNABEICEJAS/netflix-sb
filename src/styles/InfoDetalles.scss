@@ -38,6 +38,7 @@
 	}
 	.infoDetalles-conteiner-texto {
 		@include flex-colum;
+		width: 700px;
 		margin: 10px;
 		padding-bottom: $distancia-secundaria;
 		padding-left: $distancia-secundaria;
@@ -85,7 +86,8 @@
 			width: 300px;
 			height: 400px;
 		}
-	
+		.infoDetalles-conteiner-texto {
+
 			.infoDetalles-conteiner-title {
 				p {
 					font-size: 25px;
@@ -94,7 +96,7 @@
 					font-size: 45px;
 				}
 			}
-		
+		}
 	}
 }
 
@@ -139,6 +141,7 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				width: 600px;
 				margin: $distancia-responsive;
 				p {
 					margin: 0px;
@@ -201,6 +204,7 @@
 				padding: $distancia-responsive;
 			}
 			.infoDetalles-conteiner-texto {
+				width:300px;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
