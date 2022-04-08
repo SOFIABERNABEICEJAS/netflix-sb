@@ -1,8 +1,8 @@
-![Proyecto-final](proyecto-final.png)
+![Proyectofinal](https://tpfinalnetflix-sb.netlify.app/src/assents/proyecto-final.png)
 
 ## Proyecto: Netflix-SB 🎬
 
-Netflix-SB te permite ver y buscar peliculas y series e informarte sobre últimos lanzamientos, sólo en cine , populares, entre otros.
+Netflix-SB te permite buscar peliculas y series e informarte sobre últimos lanzamientos, sólo en cine , populares, entre otros.
 Es el último trabajo realizado en el curso de ADA.
 
 ---
@@ -45,8 +45,8 @@ Es el último trabajo realizado en el curso de ADA.
 
 ### Librerías utilizadas:
 
--📌 Material MAU : paginado, texticonos.
--📌 React Slick: Carrusel.
+- 📌 Material MAU : Paginado, TextField, Iconos.
+- 📌 React Slick: Carrusel.
 
 -
 
