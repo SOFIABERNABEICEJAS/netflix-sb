@@ -24,13 +24,13 @@ Es el último trabajo realizado en el curso de ADA.
 
 ### Tecnologías utilizadas:
 
-- [x] React,
-- [x] Sass,
-- [x] Html,
-- [x] Css,
-- [x] Git,
-- [x] GitHub,
-- [x] Material MUI.
+- 📌 React,
+- 📌 Sass,
+- 📌 Html,
+- 📌 Css,
+- 📌 Git,
+- 📌 GitHub,
+- 📌 Material MUI.
 
 ### Temas a destacar:
 
@@ -47,8 +47,6 @@ Es el último trabajo realizado en el curso de ADA.
 
 - 📌 Material MAU : Paginado, TextField, Iconos.
 - 📌 React Slick: Carrusel.
-
-
 
 ```
         Con mucho amor Sofi Bernabei 🤍
