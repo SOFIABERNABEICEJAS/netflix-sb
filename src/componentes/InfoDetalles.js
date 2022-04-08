@@ -44,15 +44,10 @@ const InfoDetalles = () => {
 							<img
 								src={
 									infoDetalles.backdrop_path
-										? `https://image.tmdb.org/t/p/original/${
-												infoDetalles.backdrop_path
-										  } alt="${
-												infoDetalles.name
-													? infoDetalles.name
-													: infoDetalles.title
-										  }"`
+										? `https://image.tmdb.org/t/p/original/${infoDetalles.backdrop_path}`
 										: imagenRota
 								}
+								alt={infoDetalles.name ? infoDetalles.name : infoDetalles.title}
 							></img>
 						</div>
 					)}
