@@ -1,4 +1,4 @@
-![Proyectofinal](https://tpfinalnetflix-sb.netlify.app/src/assents/proyecto-final.png)
+![Proyectofinal](https://tpfinalnetflix-sb.netlify.app/src/assets/proyecto-final.png)
 
 ## Proyecto: Netflix-SB 🎬
 
