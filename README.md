@@ -1,4 +1,4 @@
-("https://tpfinalnetflix-sb.netlify.app/assets/proyecto-final.png")
+<img width="929" alt="proyecto-final" src="https://user-images.githubusercontent.com/84356244/162500861-ad9ec549-d2a7-41a2-9eeb-be21d2aa13ec.png">
 
 ## Proyecto: Netflix-SB 🎬
 
