@@ -9,6 +9,8 @@ import { styled } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import { mobile } from "../auxiliares/variables";
 
+
+//estilos del imput buscar 
 const CssTextField = styled(TextField)({
 	"& label.Mui-focused": {
 		color: "white",

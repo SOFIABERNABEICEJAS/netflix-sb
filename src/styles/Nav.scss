@@ -37,6 +37,7 @@
 .nav-input {
 	@include flex-alinear;
 	margin: $distancia-principal;
+	color: $color-secuntario;
 }
 
 //RESPONSIVE

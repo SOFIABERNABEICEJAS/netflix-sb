@@ -38,7 +38,7 @@
 	}
 	.infoDetalles-conteiner-texto {
 		@include flex-colum;
-		width: 700px;
+		//width: 700px;
 		margin: 10px;
 		padding-bottom: $distancia-secundaria;
 		padding-left: $distancia-secundaria;
@@ -87,7 +87,8 @@
 			height: 400px;
 		}
 		.infoDetalles-conteiner-texto {
-			width: 650px;
+			//width: 650px;
+			background-color: pink;
 			.infoDetalles-conteiner-title {
 				p {
 					font-size: 25px;
@@ -110,7 +111,7 @@
 			height: 380px;
 		}
 		.infoDetalles-conteiner-texto {
-			width: 550px;
+			//width: 550px;
 			margin: $distancia-responsive;
 			padding-bottom: $distancia-responsive;
 		}
@@ -125,7 +126,8 @@
 
 		.infoDetalles-conteiner {
 			position: static;
-			width: 400px;
+			 //width: 400px;
+			 background-color:yellow;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -191,7 +193,8 @@
 		margin-bottom: 70px;
 		.infoDetalles-conteiner {
 			position: static;
-			width: 400px;
+			background-color:red;
+			//width: 400px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -209,7 +212,7 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				margin: $distancia-responsive;
+				padding: $distancia-responsive;
 				p {
 					margin: 0px;
 					font-size: 18px;
