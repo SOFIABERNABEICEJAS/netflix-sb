@@ -76,6 +76,7 @@ const SeccionPeliculasSeries = () => {
 						</div>
 					</div>
 					<div className="contenedor-paginado">
+						{/* mismo comentario que en Busqueda */}
 						{mobile && (
 							<Pagination
 								size="small"

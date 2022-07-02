@@ -40,6 +40,16 @@ const Busqueda = () => {
 						</div>
 					</div>
 					<div className="contenedor-paginado">
+						{/* estos dos pagination son casi iguales, yo lo hubiera resuelto asi para repetir menos:
+						<Pagination
+								size={mobile && "small"}
+								count={totalPages > 500 ? 500 : totalPages}
+								page={page}
+								onChange={handleChange}
+								variant="outlined"
+								shape="rounded"
+								color="primary"
+							/> */}
 						{mobile && (
 							<Pagination
 								size="small"

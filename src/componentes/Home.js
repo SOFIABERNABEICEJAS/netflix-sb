@@ -16,6 +16,7 @@ const Home = () => {
 	const { result: resultCarrusel, isLoading: isLoadingCarrusel } =
 		useFetchGeneral("now_playing", "movie", 1);
 
+		// excelente
 	const isLoadingGeneral = isLoading || isLoadingTv || isLoadingCarrusel;
 
 	return (

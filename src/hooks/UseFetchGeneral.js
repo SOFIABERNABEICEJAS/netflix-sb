@@ -22,6 +22,7 @@ const UseFetchGeneral = (categoria, tipo, page) => {
 				setIsLoading(false);
 				setTotalPages(data.total_pages);
 			});
+			// url deberia ir aqui
 	}, [page]);
 
 	return {
