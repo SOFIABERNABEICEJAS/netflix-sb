@@ -13,6 +13,8 @@ const CarruselHome = ({ result, tipo }) => {
 						<article>
 							<img
 								src={`https://image.tmdb.org/t/p/original/${curr.backdrop_path}`}
+								// esto se va a leer literalmente como esta escrito. deberias haberlo hecho asi:
+								// alt={curr.name ? curr.name : curr.title}
 								alt="curr.name ? curr.name : curr.title"
 							/>
 						</article>

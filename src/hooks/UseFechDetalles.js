@@ -17,6 +17,7 @@ const UseFetchDetalles = () => {
 				setInfoDetalles(data);
 				setIsloading(false);
 			});
+			// url tendria que ir en el array de deps
 	}, []);
 
 	return {

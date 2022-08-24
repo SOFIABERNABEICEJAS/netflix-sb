@@ -8,7 +8,7 @@ export const definirURLGeneral = (categoria, tipo, week) => {
 };
 
 
-
+// recordá dejar espacio entre los operadores: export const numeroCartas = () => {
 export const numeroCartas=()=>{
 	 const pantalla = window.innerWidth;
 
